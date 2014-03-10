@@ -10,7 +10,7 @@ $config	= array(
 	 */
     'URL_MODEL'=>1,
 	'DB_TYPE'=>'mysql',
-	'DB_HOST'=>'localhost',
+	'DB_HOST'=>'127.0.0.1',
 	'DB_NAME'=>'dwz_group',
 	'DB_USER'=>'root',
 	'DB_PWD'=>'123456',
