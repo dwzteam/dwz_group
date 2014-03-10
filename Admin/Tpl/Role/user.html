@@ -1,0 +1,27 @@
+<div class="pageContent">
+	
+	<form action="__URL__/setUser" method="post" class="pageForm required-validate" onsubmit="return validateCallback(this, dialogAjaxDone);">
+		<input type="hidden" name="groupId" VALUE="{$Think.get.id}" />
+		<div class="pageFormContent" layoutH="58">
+			<volist id="item" name="userList">
+			<div class="unit">
+				<input type="checkbox" name="groupUserId[]" value="{$key}" <?php echo in_array($key, $groupUserList) ? "checked" : "" ?>/>{$item}
+			</div>
+			</volist>
+		</div>
+		<div class="formBar">
+			<label style="float:left"><input type="checkbox" class="checkboxCtrl" group="groupUserId[]" />Select All</label>
+			<ul>
+			<!--
+			<li><div class="button"><div class="buttonContent"><button type="button" class="checkboxCtrl" group="groupUserId[]" selectType="all">All check</button></div></div></li>
+			<li><div class="button"><div class="buttonContent"><button type="button" class="checkboxCtrl" group="groupUserId[]" selectType="none">All uncheck</button></div></div></li>
+			-->
+			<li><div class="button"><div class="buttonContent"><button type="button" class="checkboxCtrl" group="groupUserId[]" selectType="invert">Invert</button></div></div></li>
+			<li><div class="buttonActive"><div class="buttonContent"><button type="submit">Save</button></div></div></li>
+			<li><div class="button"><div class="buttonContent"><button type="button" class="close">Cancel</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+
+</div>
+

@@ -1,0 +1,73 @@
+<include file="Public:pagerForm" />
+<?php
+	$search   = array("\r\n", "\n", "\r");
+	$replace = '<br />';
+?>
+<div class="pageHeader">
+	<form rel="pagerForm" onsubmit="return navTabSearch(this);" action="__URL__" method="post">
+	<div class="searchBar">
+		<ul class="searchContent">
+			<li>
+				<label>内容：</label>
+				<input type="text" name="keywords" value="{$_REQUEST.keywords}"/>
+			</li>
+            <li class="dateRange">
+                <label>日期:</label>
+                <input name="startDate" class="date readonly" readonly="readonly" type="text" value="{$_REQUEST.startDate}">
+                <span class="limit">-</span>
+                <input name="endDate" class="date readonly" readonly="readonly" type="text" value="{$_REQUEST.endDate}">
+            </li>
+		</ul>
+		<div class="subBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">查询</button></div></div></li>
+			</ul>
+		</div>
+	</div>
+	</form>
+</div>
+
+<div class="pageContent">
+	<div class="panelBar">
+		<ul class="toolBar">
+            <li><a class="add" href="__URL__/edit/user_id/<?php echo $_SESSION[C('USER_AUTH_KEY')] ?>/task_date/<?php echo date('Y-m-d') ?>" target="navTab" rel="DailyTaskOpt"><span>写工作日志</span></a></li>
+            <li><a class="delete" href="__URL__/foreverdelete/id/{sid_obj}/navTabId/__MODULE__" target="ajaxTodo" title="你确定要删除吗？" warn="请选择信息"><span>删除</span></a></li>
+            <li><a class="edit" href="__URL__/edit/id/{sid_obj}" target="navTab" rel="DailyTaskOpt" warn="请选择信息"><span>编辑</span></a></li>
+			<li class="line">line</li>
+			<li><a class="icon" href="__URL__/weeklyReport/department/{$_SESSION[C('USER_AUTH_KEY')]|attrById='user','department',###}" target="navTab" rel="DailyTask"><span>查看工作周报</span></a></li>
+		</ul>
+	</div>
+
+	<table class="list" width="100%" layoutH="116">
+		<thead>
+		<tr>
+			<th width="80" orderField="nickname" <if condition="$_REQUEST._order eq 'nickname'">class="{$_REQUEST._sort}"</if>>昵称</th>
+            <th width="80" orderField="department" <if condition="$_REQUEST._order eq 'department'">class="{$_REQUEST._sort}"</if>>部门</th>
+            <th>内容</th>
+			<th width="80" orderField="task_date" <if condition="$_REQUEST._order eq 'task_date'">class="{$_REQUEST._sort}"</if>>日期</th>
+            <th width="130" orderField="create_time" <if condition="$_REQUEST._order eq 'create_time'">class="{$_REQUEST._sort}"</if>是>添加时间</th>
+		</tr>
+		</thead>
+		<tbody>
+		<volist id="vo" name="list">
+			<tr target="sid_obj" rel="{$vo['id']}">
+				<td>{$vo['nickname']}</td>
+                <td>{$vo['department']|C='departments.'.###}</td>
+                <td><?php echo str_replace($search, $replace, $vo['content']) ?></td>
+				<td>{$vo['task_date']}</td>
+				<td>{$vo['create_time']|date="Y-m-d H:i:s",###}</td>
+			</tr>
+		</volist>
+		</tbody>
+	</table>
+
+	<div class="panelBar">
+		<div class="pages">
+			<span>共{$totalCount}条</span>
+		</div>
+		<div class="pagination" targetType="navTab" totalCount="{$totalCount}" numPerPage="{$numPerPage}" pageNumShown="10" currentPage="{$currentPage}"></div>
+	</div>
+
+</div>
+
+

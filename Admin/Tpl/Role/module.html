@@ -1,0 +1,41 @@
+<if condition="empty($_GET['appId'])">
+	<form method="post" action="__URL__/setModule" class="pageForm required-validate" onsubmit="return validateCallback(this, dialogAjaxDone)">
+		<input type="hidden" name="groupId" VALUE="{$Think.get.groupId}" />
+		<div class="pageFormContent" layoutH="100" layoutType="dialog">
+			<div class="unit">
+				<label>Applicaion:</label>
+				<select name="appId" onchange="selectApp_module('{$Think.get.groupId}', this.value)">
+					<option value="">Choose</option>
+					<volist id="item" name="appList">
+					<option value="{$key}" <?php echo in_array($key, $selectAppId) ? "selected" : "" ?>>{$item}</option>
+					</volist>
+				</select>
+			</div>
+			
+			<div id="moduleSelectBox">
+			<volist id="item" name="moduleList">
+			<div class="unit">
+				<input <?php echo in_array($key, $groupModuleList) ? "checked" : "" ?> type="checkbox" name="groupModuleId[]" value="{$key}"/>{$item}
+			</div>
+			</volist>
+			</div>
+		</div>
+		<div class="formBar">
+			<label style="float:left"><input type="checkbox" class="checkboxCtrl" group="groupModuleId[]" />全选</label>
+			<ul>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="checkboxCtrl" group="groupModuleId[]" selectType="invert">反选</button></div></div></li>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" onclick="$.pdialog.closeCurrent()">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+	
+<else />
+
+	<volist id="item" name="moduleList">
+	<div class="unit">
+		<input <?php echo in_array($key, $groupModuleList) ? "checked" : "" ?> type="checkbox" name="groupModuleId[]" value="{$key}"/>{$item}
+	</div>
+	</volist>
+</if>
+

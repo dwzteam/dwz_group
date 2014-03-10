@@ -1,0 +1,91 @@
+<include file="Public:pagerForm" />
+<?php
+	$accessSystemDB = moduleAccess('SystemDB');
+	$search   = array("\r\n", "\n", "\r");
+	$replace = '<br />';
+    $index = 0;
+?>
+<div class="pageHeader">
+    <form rel="pagerForm" onsubmit="return navTabSearch(this);" action="__URL__/weeklyReport" method="post">
+        <div class="searchBar">
+            <ul class="searchContent">
+                <li>
+                    <label>部门：</label>
+                    <select name="department" class="required combox">
+                        <volist name='Think.config.departments' id="department">
+                            <option value="{$key}" <?php echo $key == $_REQUEST['department'] ? 'selected' : '' ?>>{$department}</option>
+                        </volist>
+                    </select>
+                </li>
+                <li>
+                    <label>年份：</label>
+                    <select name="year" class="combox" ref="weeklyReport_weekMonday" refUrl="__URL__/weeksByYear/year/{value}">
+                        <for start="date('Y')-2" end="date('Y')+1" name="item">
+                            <option value="{$item}" <?php echo $item == $year ? 'selected' : '' ?>>{$item}年</option>
+                        </for>
+                    </select>
+                </li>
+                <li>
+                    <label>周：</label>
+                    <select name="weekMonday" class="combox" id="weeklyReport_weekMonday" onchange="$(this).parents('form:first').submit()">
+                        <volist id="week" name="weeks">
+                        <option value="{$week['date']|date="Y-m-d",###}" <?php echo date('Y-m-d', $week['date']) == $weekMonday ? 'selected' : '' ?>>第{$week['sn']}周 {$week['date']|date="Y-m-d",###}</option>
+                        </volist>
+                    </select>
+                </li>
+            </ul>
+            <div class="subBar">
+                <ul>
+                    <li><div class="buttonActive"><div class="buttonContent"><button type="submit">查询</button></div></div></li>
+                </ul>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="pageContent">
+    <div class="panelBar">
+        <ul class="toolBar">
+            <li><a class="add" href="__URL__/edit/user_id/<?php echo $_SESSION[C('USER_AUTH_KEY')] ?>/task_date/<?php echo date('Y-m-d') ?>" target="navTab" rel="DailyTaskOpt"><span>写工作日志</span></a></li>
+            <li class="line">line</li>
+            <li><a class="icon" href="__URL__" target="navTab" rel="DailyTask"><span>返回列表</span></a></li>
+        </ul>
+    </div>
+    <table class="list" width="100%" layoutH="90">
+        <thead>
+        <tr>
+            <th width="20"></th>
+            <th></th>
+            <volist id="vo" name="data.head">
+                <th width="13%">{$vo}</th>
+            </volist>
+        </tr>
+        </thead>
+        <tbody>
+        <?php foreach($data['body'] as $key => $userRow){ ?>
+        <tr>
+            <td>{++$index}</td>
+            <td style="font-weight: bold">
+            <?php if ($accessSystemDB) { ?>
+                <a class="unit" href="__URL__/edit/user_id/{$userRow['user_id']}/task_date/<?php echo date('Y-m-d') ?>" target="navTab" rel="DailyTaskOpt">{$key}</a>
+            <?php
+            } else {
+                echo $key;
+            }
+           ?>
+            </td>
+            <td><?php echo str_replace($search, $replace, $userRow['Mon']['content']) ?></td>
+            <td><?php echo str_replace($search, $replace, $userRow['Tue']['content']) ?></td>
+            <td><?php echo str_replace($search, $replace, $userRow['Wed']['content']) ?></td>
+            <td><?php echo str_replace($search, $replace, $userRow['Thu']['content']) ?></td>
+            <td><?php echo str_replace($search, $replace, $userRow['Fri']['content']) ?></td>
+            <td><?php echo str_replace($search, $replace, $userRow['Sat']['content']) ?></td>
+            <td><?php echo str_replace($search, $replace, $userRow['Sun']['content']) ?></td>
+        </tr>
+        <?php } ?>
+        </tbody>
+    </table>
+
+</div>
+
+

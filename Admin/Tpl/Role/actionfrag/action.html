@@ -1,0 +1,5 @@
+<volist id="item" name="actionList">
+<div class="unit">
+	<input <?php echo in_array($key, $groupActionList) ? "checked" : "" ?> type="checkbox" name="groupActionId[]" value="{$key}"/>{$item}
+</div>
+</volist>

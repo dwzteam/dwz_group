@@ -1,0 +1,29 @@
+
+<div class="pageContent">
+	
+	<form method="post" action="__URL__/checkLogin/callbackType/closeCurrent" class="pageForm" onsubmit="return validateCallback(this, dialogAjaxDone)">
+		<div class="pageFormContent" layoutH="58">
+			<p>
+				<label>帐号：</label>
+				<input type="text" name="account" size="20" class="required" />
+			</p>
+			<p>
+				<label>密码：</label>
+				<input type="password" name="password" size="20" class="required" />
+			</p>
+			<p>
+				<label>验证码：</label>
+				<input class="code" name="verify" type="text" size="5" />
+				<span><img id="verifyImg" SRC="__URL__/verify/" onClick="fleshVerify()" border="0" alt="点击刷新验证码" style="cursor:pointer" align="absmiddle"></span>
+			</p>
+		</div>
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">提交</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+	
+</div>
+

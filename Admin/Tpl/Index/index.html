@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$Think.config.sitename}</title>
+
+<link href="__PUBLIC__/dwz/themes/default/style.css" rel="stylesheet" type="text/css" />
+<link href="__PUBLIC__/dwz/themes/css/core.css" rel="stylesheet" type="text/css" />
+<!--[if IE]>
+<link href="__PUBLIC__/dwz/themes/css/ieHack.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<style type="text/css">
+    fieldset.nowrap {padding: 5px; margin-top: 10px;}
+    fieldset.nowrap p{clear: both; padding: 5px;}
+</style>
+
+<script src="__PUBLIC__/dwz/js/speedup.js" type="text/javascript"></script>
+<script src="__PUBLIC__/dwz/js/jquery-1.7.2.min.js" type="text/javascript"></script>
+<script src="__PUBLIC__/dwz/js/jquery.cookie.js" type="text/javascript"></script>
+<script src="__PUBLIC__/dwz/js/jquery.validate.js" type="text/javascript"></script>
+<script src="__PUBLIC__/dwz/js/jquery.bgiframe.js" type="text/javascript"></script>
+<script src="__PUBLIC__/xheditor/xheditor-1.2.1.min.js" type="text/javascript"></script>
+<script src="__PUBLIC__/xheditor/xheditor_lang/zh-cn.js" type="text/javascript"></script>
+<script src="__PUBLIC__/dwz/js/dwz.min.js" type="text/javascript"></script>
+<script src="__PUBLIC__/dwz/js/dwz.regional.zh.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+function fleshVerify(){
+	//重载验证码
+	$('#verifyImg').attr("src", '__APP__/Public/verify/'+new Date().getTime());
+}
+function dialogAjaxMenu(json){
+	dialogAjaxDone(json);
+	if (json.statusCode == DWZ.statusCode.ok){
+		$("#sidebar").loadUrl("__APP__/Public/menu");
+	}
+}
+function navTabAjaxMenu(json){
+	navTabAjaxDone(json);
+	if (json.statusCode == DWZ.statusCode.ok){
+		$("#sidebar").loadUrl("__APP__/Public/menu");
+	}
+}
+function checkTextareaFormSubmit(textarea) {
+    if (window.event.keyCode == DWZ.keyCode.ENTER && window.event.ctrlKey) {
+        $(textarea).parents('form:first').trigger("submit");
+    }
+}
+
+$(function(){
+	DWZ.init("__PUBLIC__/dwz/dwz.frag.xml", {
+		loginUrl:"__APP__/Public/login_dialog", loginTitle:"登录",	// 弹出登录对话框
+//		loginUrl:"__APP__/Public/login",	//跳到登录页面
+		statusCode:{ok:1,error:0},
+		pageInfo:{pageNum:"pageNum", numPerPage:"numPerPage", orderField:"_order", orderDirection:"_sort"}, //【可选】
+		debug:false,	// 调试模式 【true|false】
+		callback:function(){
+			initEnv();
+			$("#themeList").theme({themeBase:"__PUBLIC__/dwz/themes"});
+		}
+	});
+});
+</script>
+</head>
+
+<body scroll="no">
+	<div id="layout">
+		<div id="header">
+			<div class="headerNav">
+				<a class="logo" href="__APP__">Logo</a>
+				<ul class="nav">
+					<li><a href="__APP__/Public/main" target="dialog" width="580" height="360" rel="sysInfo">系统消息</a></li>
+					<li><a href="__APP__/Public/password/" target="dialog" mask="true">修改密码</a></li>
+					<li><a href="__APP__/Public/profile/" target="dialog" mask="true">修改资料</a></li>
+					<li><a href="__APP__/Public/logout/">退出</a></li>
+				</ul>
+				<ul class="themeList" id="themeList">
+					<li theme="default"><div class="selected">蓝色</div></li>
+					<li theme="green"><div>绿色</div></li>
+					<li theme="purple"><div>紫色</div></li>
+					<li theme="silver"><div>银色</div></li>
+					<li theme="azure"><div>天蓝</div></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div id="leftside">
+			<div id="sidebar_s">
+				<div class="collapse">
+					<div class="toggleCollapse"><div></div></div>
+				</div>
+			</div>
+			
+			<div id="sidebar">
+                <div class="toggleCollapse"><h2>主菜单</h2><div>收缩</div></div>
+				<include file="Public:menu" />
+			</div>
+		</div>
+
+		<div id="container">
+			<div id="navTab" class="tabsPage">
+				<div class="tabsPageHeader">
+					<div class="tabsPageHeaderContent"><!-- 显示左右控制时添加 class="tabsPageHeaderMargin" -->
+						<ul class="navTab-tab">
+							<li tabid="main" class="main"><a href="javascript:void(0)"><span><span class="home_icon">我的主页</span></span></a></li>
+						</ul>
+					</div>
+					<div class="tabsLeft">left</div><!-- 禁用只需要添加一个样式 class="tabsLeft tabsLeftDisabled" -->
+					<div class="tabsRight">right</div><!-- 禁用只需要添加一个样式 class="tabsRight tabsRightDisabled" -->
+					<div class="tabsMore">more</div>
+				</div>
+				<ul class="tabsMoreList">
+					<li><a href="javascript:void(0)">我的主页</a></li>
+				</ul>
+				<div class="navTab-panel tabsPageContent layoutBox">
+					<div class="page unitBox">
+						<div class="accountInfo">
+							<div class="alertInfo">
+								<h2><a target="_blank" href="{$Think.config.DWZ_URL}">DWZ框架</a></h2>
+							</div>
+							<div class="right">
+								<p>{$Think.now}</p>
+							</div>
+							<p><span>{$Think.config.sitename}</span></p>
+							<p>Welcome, {$Think.session.loginUserName}</p>
+						</div>
+						<div class="pageFormContent" layoutH="80">
+
+                            <fieldset class="nowrap">
+                                <legend>我的工作台</legend>
+                                <p><a class="buttonActive" href="__APP__/DailyTask/edit/user_id/<?php echo $_SESSION[C('USER_AUTH_KEY')] ?>/task_date/<?php echo date('Y-m-d') ?>" target="navTab" rel="DailyTaskOpt"><span>写工作日志</span></a></p>
+                                <p><a class="button" href="__APP__/DailyTask/weeklyReport/department/{$_SESSION[C('USER_AUTH_KEY')]|attrById='user','department',###}" target="navTab" rel="DailyTask"><span>查看工作周报</span></a></p>
+<!--
+                                <p><a class="button" href="__APP__/DailyTask/monthReport/user_id/<?php echo $_SESSION[C('USER_AUTH_KEY')] ?>" target="navTab" rel="DailyTaskOpt"><span>我的月报统计</span></a></p>
+-->
+                            </fieldset>
+
+                            <fieldset class="nowrap">
+                                <legend>每日晨会提醒</legend>
+<pre>
+1）每位小组成员，每日早上9:30之前写工作日志
+
+2）15分钟小组晨会沟通，安排和调整工作任务
+
+3）根据晨会沟通，调整工作日志
+</pre>
+                            </fieldset>
+
+                            <fieldset class="nowrap">
+                                <legend>系统使用帮助</legend>
+<pre>
+1）安装部署：
+
+    a）下载代码，Apahce PHP环境创建虚拟主机
+
+    b）导入Mysql数据 mysql -u root -p dwz_group < dwz_group.sql
+
+    c）打开dwz_group/Admin/Conf/config.php 配制数据库用户名和密码
+
+    d）打开dwz_group/Admin/constants.inc.php 配制部门
+
+2）admin用户登入系统(默认密码admin)，创建用户，分配角色（系统默认有组员和组长2个角色，已经设置好权限，一般情况无需再创建新角色）
+
+3）用户登入，开始使用工作日志系统
+</pre>
+                            </fieldset>
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	
+	<div id="footer">Copyright &copy; 2010 - <?php echo date('Y');?>&nbsp;<a href="http://www.j-ui.com" target="_blank">j-ui.com</a></div>
+
+</body>
+</html>

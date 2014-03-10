@@ -1,0 +1,56 @@
+<div class="pageContent">
+
+	<form method="post" action="__URL__/update/navTabId/__MODULE__?callbackType=closeCurrent" class="pageForm required-validate" onsubmit="return validateCallback(this, dialogAjaxMenu)">
+		<input type="hidden" name="user_id" value="<?php echo $_SESSION[C('USER_AUTH_KEY')] ?>">
+		<input type="hidden" name="id" value="{$vo.id}" >
+		<input type="hidden" name="ajax" value="1">
+		<input type="hidden" name="pid" value="{$vo.pid}">
+		<div class="pageFormContent" layoutH="58">
+			<div class="unit">
+				<label>模块名：</label>
+				<input type="text" class="required alphanumeric"  name="name" value="{$vo.name}">
+			</div>
+			
+			<div class="unit">
+				<label>显示名：</label>
+				<input type="text" class="required"  name="title" value="{$vo.title}">
+			</div>
+            <div class="unit">
+                <label>排序：</label>
+                <input type="text" class="required"  name="sort" value="{$vo.sort}">
+            </div>
+
+			<div class="unit">
+				<label>分组：</label>
+				<select name="group_id">
+					<option value="">未分组</option>
+						<volist name="list" id="group">
+						<option value="{$group.id}" <eq name="group.id" value="$vo['group_id']">selected</eq>>{$group.title}</option>
+						</volist>
+				</select>
+			</div>
+			
+			<div class="unit">
+				<label>状态：</label>
+				<select name="status">
+					<option <eq name="vo.status" value="1" >selected</eq> value="1">启用</option>
+					<option <eq name="vo.status" value="0" >selected</eq> value="0">禁用</option>
+				</select>
+			</div>
+			
+			<div class="unit">
+				<label>描 述：</label>
+				<textarea name="remark"  rows="3" cols="57">{$vo.remark}</textarea>
+			</div>
+		</div>
+
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+
+</div>
+

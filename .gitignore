@@ -1,0 +1,8 @@
+*.class
+*.db
+*.pyc
+*.pyo
+.svn
+Runtime
+Thumbs.db
+_svn

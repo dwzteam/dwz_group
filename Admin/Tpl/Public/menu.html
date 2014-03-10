@@ -1,0 +1,22 @@
+	
+<div class="accordion" fillSpace="sideBar">
+	<div class="accordionHeader">
+		<h2><span>Folder</span>应用</h2>
+	</div>
+	<div class="accordionContent">
+	
+		<ul class="tree treeFolder">
+			<volist id="item" name="menu" >
+            <if condition="$item['group_id'] eq 2">
+			<eq name="item['access']" value="1">
+				<li><a href="__APP__/{$item['name']}/index/" target="navTab" rel="{$item['name']}">{$item['title']}</a></li>
+			</eq>
+            </if>
+			</volist>
+            <?php if (moduleAccess('SystemDB')) { ?>
+                <li><a href="__APP__/SystemDB/backupDB" target="ajaxTodo" title="确定要备份数据库吗？">备份数据库</a></li>
+            <?php } ?>
+		</ul>
+
+	</div>
+</div>
