@@ -130,7 +130,7 @@ class DailyTaskAction extends CommonAction {
             $userList = D('User')->getUserListByDepartment($department);
             foreach($userList as $user){ // 初始化部门中全部用户
                 if (!isset($data['body'][$user[nickname]])){
-                    $data['body'][$user[nickname]] = array('user_id'=>$user['user_id']);
+                    $data['body'][$user[nickname]] = array('user_id'=>$user['id']);
                 }
             }
 
