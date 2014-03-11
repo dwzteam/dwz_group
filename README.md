@@ -18,4 +18,7 @@ Quick Start：
 
 	3）用户登入，开始使用工作日志系统
 
+	注意：配制完成后，如果浏览器访问报错，请检查php.ini配制中mysql相关extension是否放开.
+	如果登入验证码无法显示请检查是否已经开启GD库支持【命令行输入: php -i | grep -i --color gd】
+
 jUI富客户端框架在线demo： http://j-ui.com/
