@@ -61,6 +61,10 @@ class DailyTaskAction extends CommonAction {
         if (empty($user_id)) $this->error('用户ID必须');
         if (empty($task_date)) $this->error('Task日期必须');
 
+		if (! D('User')->isSameDepartment($user_id)) {
+			$this->error('不能修改其它部门工作日志');
+		}
+
         $name=$this->getActionName();
         $model = D ( $name );
 

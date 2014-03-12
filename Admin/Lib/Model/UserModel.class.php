@@ -47,5 +47,21 @@ class UserModel extends CommonModel {
         $rs = $this->db->query('select id, account, nickname, department from '.$this->tablePrefix.'user where department='.$department.' order by account');
         return $rs;
     }
+
+	function isSameDepartment($userId)
+	{
+		if (!isset($userId)) {
+			return false;
+		} else if ($userId == $_SESSION[C('USER_AUTH_KEY')]) {
+			return true;
+		}
+
+		$my = $this->getById($_SESSION[C('USER_AUTH_KEY')]);
+		$user = $this->getById($userId);
+		if ($my['department'] == $user['department']) {
+			return true;
+		}
+		return false;
+	}
 }
 ?>
