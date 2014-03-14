@@ -13,8 +13,11 @@
 			</dl>
             <dl>
                 <dt>日期：</dt>
-                <dd><input type="text" name="task_date" value="{$vo.task_date}" readonly class="date required">
-                <a class="inputDateButton" href="javascript:;">选择</a></dd>
+                <dd>
+					<input id="dailyTask_taskDate" type="text" name="task_date" value="{$vo.task_date}" readonly class="date required">
+                	<a class="inputDateButton" href="javascript:;">选择</a>
+					<a class="unit" style="font-weight: bold; color:red;" href="__URL__/edit/user_id/{$vo.user_id}/task_date/{dailyTask_taskDate}" target="navTab" rel="DailyTaskOpt" title="写工作日志"><span>Reload</span></a>
+				</dd>
             </dl>
             <dl class="nowrap">
                 <dt>内容：</dt>
