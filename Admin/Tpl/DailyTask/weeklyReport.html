@@ -11,7 +11,7 @@
             <ul class="searchContent">
                 <li>
                     <label>部门：</label>
-                    <select name="department" class="required combox">
+                    <select name="department" class="required combox" onchange="$(this).parents('form:first').submit()">
                         <volist name='Think.config.departments' id="department">
                             <option value="{$key}" <?php echo $key == $_REQUEST['department'] ? 'selected' : '' ?>>{$department}</option>
                         </volist>
