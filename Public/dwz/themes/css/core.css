@@ -507,7 +507,7 @@ body { overflow:hidden;}
 
 .pageFormContent dl { float:left; display:block; width:380px; height:21px; margin:0; padding:5px 0; position:relative;}
 .pageFormContent dt { float:left; width:120px; padding:0 5px; line-height:21px;}
-.pageFormContent dd {display:block;line-height:21px;width:220px;float:left;}
+.pageFormContent dd {display:block;line-height:21px;width:250px;float:left;}
 .pageFormContent dl.nowrap, .nowrap dl{width:100%; height:auto; clear: both;}
 .pageFormContent dl.nowrap dd, .nowrap dd {width: 560px;}
 
