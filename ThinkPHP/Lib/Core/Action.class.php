@@ -372,14 +372,12 @@ abstract class Action {
             $data['info']   =   $message;
             $data['status'] =   $status;
             $data['url']    =   $jumpUrl;
-            
-            $data['statusCode']  =  $status;	// zhanghuihua@msn.com
+
 	        $data['navTabId']  =  $_REQUEST['navTabId'];	// zhanghuihua@msn.com
 	        $data['rel']  =  $_REQUEST['rel'];	// zhanghuihua@msn.com
 	        $data['callbackType']  =  $_REQUEST['callbackType'];	// zhanghuihua@msn.com
 	        $data['forwardUrl']  =  $_REQUEST['forwardUrl'];	// zhanghuihua@msn.com
 	        $data['confirmMsg']  =  $_REQUEST['confirmMsg'];	// zhanghuihua@msn.com
-	        $data['message'] =  $message; // zhanghuihua@msn.com
 	        
             $this->ajaxReturn($data);
         }
