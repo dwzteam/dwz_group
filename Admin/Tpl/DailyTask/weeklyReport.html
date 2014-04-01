@@ -87,15 +87,15 @@
 		<tr>
 			<td></td>
 			<td style="font-weight: bold">
-			<?php if ($accessSystemDB && isset($weekSummary)) { ?>
+				<?php if ($accessSystemDB && isset($weekSummary)) { ?>
 				<a class="unit" href="__URL__/editWeekSummary/department/{$weekSummary['department']}/week_date/{$weekSummary['week_date']}" target="navTab" rel="DailyTaskOpt">总结</a>
-			<?php
+				<?php
             } else {
                 echo '总结';
             }
             ?>
 			</td>
-			<td colspan="7"><?php echo str_replace($search, $replace, $weekSummary['content']) ?></td>
+			<td colspan="7" style="color:red"><?php echo str_replace($search, $replace, $weekSummary['content']) ?></td>
 		</tr>
         </tbody>
     </table>
