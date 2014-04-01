@@ -1,0 +1,42 @@
+<h2 class="contentTitle">一周总结</h2>
+
+<div class="pageContent">
+
+	<form method="post" action="__URL__/updateWeekSummary/navTabId/__MODULE__?callbackType=closeCurrent" class="pageForm required-validate" onsubmit="return validateCallback(this, navTabAjaxDone)">
+
+		<div class="pageFormContent" layoutH="98">
+			
+			<dl>
+				<dt>部门：</dt>
+				<dd>
+					<select name="department" class="required combox">
+						<volist name='Think.config.departments' id="department">
+							<option value="{$key}" <?php echo $key == $vo['department'] ? 'selected' : '' ?>>{$department}</option>
+						</volist>
+					</select>
+				</dd>
+			</dl>
+            <dl>
+                <dt>日期：</dt>
+                <dd>
+					<input type="text" name="week_date" value="{$vo.week_date}" readonly class="required">
+				</dd>
+            </dl>
+            <dl class="nowrap">
+                <dt>内容：</dt>
+                <dd><textarea class="required" name="content" rows="10" cols="85" onkeydown="checkTextareaFormSubmit(this)">{$vo.content}</textarea>
+                <span class="info">内容：纯文本，一行写一个总结，提交快捷键Ctrl+Enter</span></dd>
+			</dl>
+
+		</div>
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">提交</button></div></div></li>
+				<li><a class="button" href="__URL__" target="navTab" rel="DailyTask"><span>返回列表</span></a></li>
+                <li><a class="button" href="__URL__/weeklyReport/department/{$_SESSION[C('USER_AUTH_KEY')]|attrById='user','department',###}" target="navTab" rel="DailyTask"><span>查看工作周报</span></a></li>
+            </ul>
+		</div>
+	</form>
+	
+</div>
+

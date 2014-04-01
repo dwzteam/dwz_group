@@ -95,6 +95,63 @@ class DailyTaskAction extends CommonAction {
         }
     }
 
+	function editWeekSummary() {
+		$name=$this->getActionName();
+		$model = M ('WeekSummary');
+		$department = $_REQUEST ['department'];
+		$week_date = $_REQUEST ['week_date'];
+
+		if (empty($department)) $this->error('部门必须');
+		if (empty($week_date)) $this->error('WeekDate日期必须');
+		$map = array ('department' => $department, 'week_date' => $week_date);
+		$vo = $model->where($map)->find();
+		if (!isset($vo)) {
+			$vo = $map;
+		}
+
+		$this->assign ( 'vo', $vo );
+		$this->display ();
+	}
+	function updateWeekSummary() {
+		$department = $_REQUEST ['department'];
+		$week_date = $_REQUEST ['week_date'];
+
+		if (empty($department)) $this->error('部门必须');
+		if (empty($week_date)) $this->error('WeekDate日期必须');
+
+		$user_id = $_SESSION [C ( 'USER_AUTH_KEY' )];
+		$user = M('User')->find($user_id);
+		if (!isset($user) || $user['department'] != $department) {
+			$this->error('不能修改其它部门工作日志总结');
+		}
+
+		$model = D ('WeekSummary');
+		$map = array ('department' => $department, 'week_date' => $week_date);
+		$po = $model->where ($map)->field ( 'id' )->find ();
+
+		if (!isset($po)) { //添加数据
+			if (false === $model->create ()) {
+				$this->error ( $model->getError () );
+			}
+			$list = $model->add ();
+		} else { // 更新数据
+			$_POST ['id'] = $po['id'];
+
+			if (false === $model->create ()) {
+				$this->error ( $model->getError () );
+			}
+
+			$list = $model->save ();
+		}
+
+		if ($list !== false) { //保存成功
+			$this->success ( '' );
+		} else {
+			//失败提示
+			$this->error ( '编写工作日志失败!' );
+		}
+	}
+
     function weeklyReport(){
         $year = $_REQUEST['year'];
         if (!isset($year)) {
@@ -142,14 +199,27 @@ class DailyTaskAction extends CommonAction {
             $map['department'] = $department;
             $model = new DailyTaskViewModel();
             $voList = $model->where($map)->order('User.account asc')->select();
-            foreach($voList as $item){
-                if (!isset($data['body'][$item[nickname]])){
-                    $data['body'][$item[nickname]] = array('user_id'=>$item['user_id']);
-                }
 
-                $weekSn = $head[$item['day_num']]['sn'];
-                $data['body'][$item[nickname]][$weekSn] = $item;
-            }
+			if (isset($voList)) {
+				foreach($voList as $item){
+					if (!isset($data['body'][$item[nickname]])){
+						$data['body'][$item[nickname]] = array('user_id'=>$item['user_id']);
+					}
+
+					$weekSn = $head[$item['day_num']]['sn'];
+					$data['body'][$item[nickname]][$weekSn] = $item;
+				}
+			}
+
+			// week summary
+			$weekSummaryMap = $this->_getWeekTerm($weekMonday, 'week_date');
+			$weekSummaryMap['department'] = $department;
+			$weekSummary = M('WeekSummary')->where($weekSummaryMap)->find();
+
+			if (!isset($weekSummary)) {
+				$weekSummary = array('department'=>$department, 'week_date'=>$weekMonday);
+			}
+			$this->assign('weekSummary', $weekSummary);
         }
 
         $this->assign ( 'year', $year );
@@ -210,13 +280,13 @@ class DailyTaskAction extends CommonAction {
         $dayNum = date('w', $day);
         return $dayNum == 0 ? 7 : $dayNum;
     }
-    private function _getWeekTerm($weekMonday){
+    private function _getWeekTerm($weekMonday, $dateField='task_date'){
         $dateArray = date_parse($weekMonday);
         $sunday = mktime(0, 0, 0, $dateArray['month'] , $dateArray['day'] + 6, $dateArray['year']);
         $weekSunday = date('Y-m-d', $sunday);
 
         $map = array ();
-        $map['task_date'] = array(array('egt', $weekMonday), array('elt', $weekSunday));
+        $map[$dateField] = array(array('egt', $weekMonday), array('elt', $weekSunday));
 
         return $map;
     }
