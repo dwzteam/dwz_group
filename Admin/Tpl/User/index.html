@@ -32,7 +32,6 @@
 	<table class="table" width="100%" layoutH="138">
 		<thead>
 		<tr>
-			<th width="60">编号</th>
 			<th width="100" orderField="account" <if condition="$_REQUEST._order eq 'account'">class="{$_REQUEST._sort}"</if>>用户名</th>
 			<th orderField="nickname" <if condition="$_REQUEST._order eq 'nickname'">class="{$_REQUEST._sort}"</if>>昵称</th>
 			<th orderField="email" <if condition="$_REQUEST._order eq 'email'">class="{$_REQUEST._sort}"</if>>Email</th>
@@ -45,7 +44,6 @@
 		<tbody>
 		<volist id="vo" name="list">
 			<tr target="sid_user" rel="{$vo['id']}">
-				<td>{$vo['id']}</td>
 				<td>{$vo['account']}</td>
 				<td>{$vo['nickname']}</td>
 				<td>{$vo['email']}</td>
