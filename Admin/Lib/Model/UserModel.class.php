@@ -44,7 +44,7 @@ class UserModel extends CommonModel {
 
     function getUserListByDepartment($department)
     {
-        $rs = $this->db->query('select id, account, nickname, department from '.$this->tablePrefix.'user where department='.$department.' order by account');
+        $rs = $this->db->query('select id, account, nickname, department from '.$this->tablePrefix.'user where status=1 and department='.$department.' order by account');
         return $rs;
     }
 
