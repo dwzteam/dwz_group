@@ -27,7 +27,8 @@ class UserModel extends CommonModel {
     function hasRole($userId) {
         $table = $this->tablePrefix.'role_user';
         $rs = $this->db->query('select role_id from '.$table.' where user_id='.$userId);
-        if (isset($rs)) {
+
+        if (isset($rs) && !empty($rs)) {
             return true;
         }
         return false;
@@ -36,7 +37,7 @@ class UserModel extends CommonModel {
     function hasDailyTask($userId) {
         $table = $this->tablePrefix.'daily_task';
         $rs = $this->db->query('select id from '.$table.' where user_id='.$userId);
-        if (isset($rs)) {
+        if (isset($rs) && !empty($rs)) {
             return true;
         }
         return false;

@@ -66,7 +66,7 @@ class UserAction extends CommonAction {
         }
     }
 
-    function foreverdelete(){
+    public function foreverdelete(){
         $name=$this->getActionName();
         $model = D ($name);
         if (! empty ( $model )) {
