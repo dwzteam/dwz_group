@@ -30,21 +30,11 @@ class UserAction extends CommonAction {
 		}else{
 			// 写入帐号数据
 			if($result	 =	 $User->add()) {
-				$this->addRole($result);
 				$this->success('用户添加成功！');
 			}else{
 				$this->error('用户添加失败！');
 			}
 		}
-	}
-
-	protected function addRole($userId) {
-		//新增用户自动加入相应权限组
-		$RoleUser = M("RoleUser");
-		$RoleUser->user_id	=	$userId;
-        // 默认加入网站编辑组
-        $RoleUser->role_id	=	3;
-		$RoleUser->add();
 	}
 
     //重置密码
