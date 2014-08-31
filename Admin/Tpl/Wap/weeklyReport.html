@@ -1,0 +1,61 @@
+
+<?php
+	$accessSystemDB = moduleAccess('SystemDB');
+	$search   = array("\r\n", "\n", "\r");
+	$replace = '<br />';
+    $index = 0;
+?>
+
+<div>
+	<div class="pageHeader" docked="true">
+		<a href="#weeklyreport/{$lastMonday|date='Y-m-d',###}" class="button"><span>&lt;&lt;</span></a>
+		<span class="subTitle">{$weekMonday}<span style="color:red;margin-left: 5px">(周一)</span></span>
+		<a href="#weeklyreport/{$nextMonday|date='Y-m-d',###}" class="button"><span>&gt;&gt;</span></a>
+	</div>
+
+	<div class="pageContent">
+
+		<table class="list weeklyReport" width="100%">
+			<thead>
+			<tr>
+				<th width="20"></th>
+				<th>姓名</th>
+				<volist id="vo" name="data.head">
+					<th width="13%">{$vo}</th>
+				</volist>
+			</tr>
+			</thead>
+			<tbody>
+			<?php foreach($data['body'] as $key => $userRow){ ?>
+			<tr>
+				<td>{++$index}</td>
+				<td style="font-weight: bold">
+				<?php
+				echo $key;
+
+				if (!empty($userRow['qq'])) {
+					echo '<a class="btnQQ" href="tencent://message/?uin='.$userRow['qq'].'">QQ</a>';
+				}
+				?>
+				</td>
+				<td><?php echo str_replace($search, $replace, $userRow['Mon']['content']) ?></td>
+				<td><?php echo str_replace($search, $replace, $userRow['Tue']['content']) ?></td>
+				<td><?php echo str_replace($search, $replace, $userRow['Wed']['content']) ?></td>
+				<td><?php echo str_replace($search, $replace, $userRow['Thu']['content']) ?></td>
+				<td><?php echo str_replace($search, $replace, $userRow['Fri']['content']) ?></td>
+				<td><?php echo str_replace($search, $replace, $userRow['Sat']['content']) ?></td>
+				<td><?php echo str_replace($search, $replace, $userRow['Sun']['content']) ?></td>
+			</tr>
+			<?php } ?>
+
+			<tr>
+				<td></td>
+				<td style="font-weight: bold">本周总结</td>
+				<td colspan="7" style="color:red"><?php echo str_replace($search, $replace, $weekSummary['content']) ?></td>
+			</tr>
+			</tbody>
+		</table>
+
+	</div>
+
+</div>
