@@ -1,0 +1,20 @@
+.pageHeader{margin-bottom:5px; line-height:25px; font-size:13px; border-bottom:solid 1px #CCC;clear:both; text-align: center}
+.pageHeader .subTitle{padding: 0 10px; font-weight: bold}
+
+a.btnQQ{background:url(../images/qq.png) no-repeat; display:block; width:16px; height:16px; text-indent:-1000px; overflow:hidden; float:left; margin-right: 3px; margin-top: 2px}
+a.button{ border: 1px solid #999; text-decoration: none; padding: 0 10px;}
+
+.pageContent{width:1000px; overflow:auto;}
+
+/* CSS Table */
+table.list {border-collapse:collapse; border:solid 1px #ededed; font-size: 12px;}
+table.list thead tr {background:url("../images/tableth.png") repeat-x scroll 0 0 #F0EFF0;}
+table.list th {padding:1px 2px; line-height:21px; border-right: solid 1px #D0D0D0; border-bottom:solid 1px #D0D0D0; font-weight:bolder; }
+table.list td {padding:1px 2px; line-height:21px; border-right:solid 1px #ededed;border-bottom:solid 1px #ededed;}
+table.list tbody {background-color:#fff;}
+table.list a {color:#3C7FB1; line-height:20px;}
+table.list a:hover {text-decoration:underline; line-height:20px;}
+table.list td span.error {z-index:-1}
+table.nowrap tbody tr {border-bottom:solid 1px #ededed;}
+
+input.smallText, textarea.smallText {font-size: 11px}

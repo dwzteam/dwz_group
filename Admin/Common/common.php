@@ -332,4 +332,17 @@ function moduleAccess($moduleName) {
 
     return false;
 }
+
+function isMobile(){
+	$user_agent = strtolower ( $_SERVER['HTTP_USER_AGENT'] );
+	if ( preg_match ( "/phone|iphone|itouch|ipod|symbian|android|htc_|htc-|palmos|blackberry|opera mini|iemobile|windows ce|nokia|fennec|hiptop|kindle|mot |mot-|webos\/|samsung|sonyericsson|^sie-|nintendo/", $user_agent ) ) {
+		// these are the most common
+		return true;
+	} else if ( preg_match ( "/mobile|pda;|avantgo|eudoraweb|minimo|netfront|brew|teleca|lg;|lge |wap;| wap /", $user_agent ) ) {
+		// these are less common, and might not be worth checking
+		return true;
+	}
+
+	return false;
+}
 ?>

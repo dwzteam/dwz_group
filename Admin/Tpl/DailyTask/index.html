@@ -1,5 +1,6 @@
 <include file="Public:pagerForm" />
 <?php
+	$accessSystemDB = moduleAccess('SystemDB');
 	$search   = array("\r\n", "\n", "\r");
 	$replace = '<br />';
 ?>
@@ -31,8 +32,10 @@
 	<div class="panelBar">
 		<ul class="toolBar">
             <li><a class="add" href="__URL__/edit/user_id/<?php echo $_SESSION[C('USER_AUTH_KEY')] ?>/task_date/<?php echo date('Y-m-d') ?>" target="navTab" rel="DailyTaskOpt"><span>写工作日志</span></a></li>
+            <?php if ($accessSystemDB) { ?>
             <li><a class="delete" href="__URL__/foreverdelete/id/{sid_obj}/navTabId/__MODULE__" target="ajaxTodo" title="你确定要删除吗？" warn="请选择信息"><span>删除</span></a></li>
             <li><a class="edit" href="__URL__/edit/id/{sid_obj}" target="navTab" rel="DailyTaskOpt" warn="请选择信息"><span>编辑</span></a></li>
+			<?php } ?>
 			<li class="line">line</li>
 			<li><a class="icon" href="__URL__/weeklyReport/department/{$_SESSION[C('USER_AUTH_KEY')]|attrById='user','department',###}" target="navTab" rel="DailyTask"><span>查看工作周报</span></a></li>
 		</ul>

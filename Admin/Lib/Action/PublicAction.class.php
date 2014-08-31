@@ -136,6 +136,10 @@ class PublicAction extends Action {
 
 	// 用户登录页面
 	public function login() {
+		if (isMobile()){ // zhanghuihua 20140826 add for redirect to mobile view
+			redirect (__ROOT__.'/Public/wap/index.html');
+		}
+
 		if(!isset($_SESSION[C('USER_AUTH_KEY')])) {
 			$this->display();
 		}else{
@@ -165,6 +169,7 @@ class PublicAction extends Action {
 
 	// 登录检测
 	public function checkLogin() {
+
 		if(empty($_POST['account'])) {
 			$this->error('帐号错误！');
 		}elseif (empty($_POST['password'])){

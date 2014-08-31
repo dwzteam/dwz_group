@@ -35,7 +35,9 @@
                 </li>
             </ul>
             <div class="subBar">
-                <ul>
+				<a href="__URL__/weeklyReport/department/{$_REQUEST['department']}/weekMonday/{$lastMonday|date='Y-m-d',###}" target="navTab" rel="DailyTask" class="button"><span>&lt;&lt; 上一周</span></a>
+				<a href="__URL__/weeklyReport/department/{$_REQUEST['department']}/weekMonday/{$nextMonday|date='Y-m-d',###}" target="navTab" rel="DailyTask" class="button" style="margin-left: 17px"><span>下一周 &gt;&gt;</span></a>
+				<ul>
                     <li><div class="buttonActive"><div class="buttonContent"><button type="submit">查询</button></div></div></li>
                 </ul>
             </div>
@@ -72,7 +74,11 @@
             } else {
                 echo $key;
             }
-           ?>
+
+            if (!empty($userRow['qq'])) {
+				echo '<a class="btnQQ" href="tencent://message/?uin='.$userRow['qq'].'">QQ</a>';
+			}
+			?>
             </td>
             <td><?php echo str_replace($search, $replace, $userRow['Mon']['content']) ?></td>
             <td><?php echo str_replace($search, $replace, $userRow['Tue']['content']) ?></td>

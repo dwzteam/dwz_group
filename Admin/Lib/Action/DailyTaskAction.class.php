@@ -61,9 +61,9 @@ class DailyTaskAction extends CommonAction {
         if (empty($user_id)) $this->error('用户ID必须');
         if (empty($task_date)) $this->error('Task日期必须');
 
-		if (! D('User')->isSameDepartment($user_id)) {
-			$this->error('不能修改其它部门工作日志');
-		}
+        if (! D('User')->isSameDepartment($user_id)) {
+            $this->error('不能修改其它部门工作日志');
+        }
 
         $name=$this->getActionName();
         $model = D ( $name );
@@ -164,6 +164,10 @@ class DailyTaskAction extends CommonAction {
             $weekMonday = $this->_getMonday();
         }
 
+		$mondayTime = $this->parseDate($weekMonday);
+		$lastMonday = mktime(0, 0, 0, date("m", $mondayTime) , date("d", $mondayTime)-7, date("Y", $mondayTime));
+		$nextMonday = mktime(0, 0, 0, date("m", $mondayTime) , date("d", $mondayTime)+7, date("Y", $mondayTime));
+
         /*
          * array('head'=>array(),
          *      'body'=>array('Mon'=>item, 'Tue'=>item, 'Wed'=>item, 'Thu'=>item, 'Fri'=>item, 'Sat'=>item,'Sun'=>item))
@@ -191,7 +195,7 @@ class DailyTaskAction extends CommonAction {
             $userList = D('User')->getUserListByDepartment($department);
             foreach($userList as $user){ // 初始化部门中全部用户
                 if (!isset($data['body'][$user[nickname]])){
-                    $data['body'][$user[nickname]] = array('user_id'=>$user['id']);
+                    $data['body'][$user[nickname]] = array('user_id'=>$user['id'], 'qq'=>$user['qq']);
                 }
             }
 
@@ -224,7 +228,9 @@ class DailyTaskAction extends CommonAction {
 
         $this->assign ( 'year', $year );
         $this->assign ( 'weeks', $weeks);
-        $this->assign('weekMonday', $weekMonday);
+		$this->assign('weekMonday', $weekMonday);
+		$this->assign('lastMonday', $lastMonday);
+		$this->assign('nextMonday', $nextMonday);
         $this->assign ( 'data', $data );
         $this->display ();
     }

@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.6.14)
 # Database: dwz_group
-# Generation Time: 2014-04-01 02:54:54 +0000
+# Generation Time: 2014-08-31 02:45:01 +0000
 # ************************************************************
 
 
@@ -119,7 +119,8 @@ VALUES
 	(16,2,'DWZ组件前端JS编码\r\n...','2014-03-04',2,1394256665,1395973404),
 	(17,2,'DWZ组件前端JS编码\r\n...','2014-03-05',3,1394256671,1395973388),
 	(18,2,'1）ThinkPHP + jUI整合应用\r\n2）Zend Framework + jUI整合应用','2014-03-07',5,1394256819,1395973170),
-	(19,2,'PHP开发DWZ工作日志系统','2014-03-08',6,1394256889,1395138872);
+	(19,2,'PHP开发DWZ工作日志系统','2014-03-08',6,1394256889,1395138872),
+	(20,2,'1）research C++ TinyXML parse an XML form string\r\n2）调整iQ-Energy App离线计算接口，把参数传递xmlPath改成xmlContent\r\n3）协助iQ-Energy App离线计算C++接口定义\r\n4）起草技术培训计划\r\n5）起草计算引擎技术支持计划','2014-05-31',6,1401509890,1401509897);
 
 /*!40000 ALTER TABLE `daily_task` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -303,8 +304,8 @@ LOCK TABLES `user` WRITE;
 
 INSERT INTO `user` (`id`, `account`, `nickname`, `password`, `bind_account`, `last_login_time`, `last_login_ip`, `login_count`, `verify`, `email`, `qq`, `remark`, `create_time`, `update_time`, `status`, `type_id`, `info`, `department`)
 VALUES
-	(1,'admin','管理员','21232f297a57a5a743894a0e4a801fc3','',1396319329,'127.0.0.1',10,'8888','support@j-ui.com',NULL,'备注信息',1222907803,1239977420,1,0,'',NULL),
-	(2,'z','张慧华','e10adc3949ba59abbe56e057f20f883e','',1396319554,'127.0.0.1',16,NULL,'z@j-ui.com','350863780','',1393949054,1395211963,1,0,'','1'),
+	(1,'admin','管理员','21232f297a57a5a743894a0e4a801fc3','',1409295634,'127.0.0.1',16,'8888','support@j-ui.com',NULL,'备注信息',1222907803,1239977420,1,0,'',NULL),
+	(2,'z','张慧华','e10adc3949ba59abbe56e057f20f883e','',1409411464,'127.0.0.1',21,NULL,'z@j-ui.com','350863780','',1393949054,1395211963,1,0,'','1'),
 	(3,'w','吴平','e10adc3949ba59abbe56e057f20f883e','',1394200646,'127.0.0.1',0,NULL,'w@j-ui.com','465046815','',1393949111,1394160531,1,0,'','1'),
 	(4,'d','杜权','e10adc3949ba59abbe56e057f20f883e','',1394173966,'127.0.0.1',0,NULL,'d@j-ui.com','8560685','',1394173790,0,1,0,'','1');
 
@@ -332,7 +333,7 @@ LOCK TABLES `week_summary` WRITE;
 
 INSERT INTO `week_summary` (`id`, `department`, `content`, `week_date`, `create_time`, `update_time`)
 VALUES
-	(1,'1','1) \r\n2) \r\n3) ','2014-03-31',1396319989,1396320020),
+	(1,'1','1) test1\r\n2) test2\r\n3) test3','2014-03-31',1396319989,1396320020),
 	(2,'1','DWZ jUI\r\nDWZ+Java\r\nDWZ+PHP','2014-03-03',1396320373,NULL);
 
 /*!40000 ALTER TABLE `week_summary` ENABLE KEYS */;
