@@ -43,6 +43,7 @@ Ext.define('app.view.About', {
 				]
 			}
 		],
+		scrollable:true,
 		html:'<div style="padding:10px">\
 				<h2>DWZ工作日志系统移动客户端 #buildNo#</h2>\
 				<p>主要功能是可以清楚的看到一周，每人手上都有什么任务，方便合理安排和调整小组任务。</p>\

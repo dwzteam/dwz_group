@@ -32,10 +32,6 @@
 				<td style="font-weight: bold">
 				<?php
 				echo $key;
-
-				if (!empty($userRow['qq'])) {
-					echo '<a class="btnQQ" href="tencent://message/?uin='.$userRow['qq'].'">QQ</a>';
-				}
 				?>
 				</td>
 				<td><?php echo str_replace($search, $replace, $userRow['Mon']['content']) ?></td>
