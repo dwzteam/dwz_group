@@ -15,7 +15,7 @@ function checkName(){
 
 			<div class="unit">
 				<label>用户名：</label>
-				<input type="text" class="required alphanumeric" size="30" maxlength="20" name="account" />
+				<input type="text" class="required" size="30" maxlength="20" name="account">
 			</div>
             <div class="unit">
                 <label>昵称：</label>
@@ -23,11 +23,15 @@ function checkName(){
             </div>
 			<div class="unit">
 				<label>Password：</label>
-				<input type="text" name="password" size="30" maxlength="20" class="required alphanumeric"/>
+				<input type="text" name="password" size="30" maxlength="20" class="required alphanumeric">
 			</div>
 			<div class="unit">
 				<label>Email：</label>
-				<input type="text" name="email" size="30" maxlength="100" class="required email"/>
+				<input type="text" name="email" size="30" maxlength="100" class="email">
+			</div>
+			<div class="unit">
+				<label>电话：</label>
+				<input type="text" name="phone" size="30" maxlength="100" class="phone">
 			</div>
             <div class="unit">
                 <label>部门：</label>
@@ -48,7 +52,7 @@ function checkName(){
 			
 			<div class="unit">
 				<label>备注：</label>
-				<textarea name="remark" rows="3" cols="57"></textarea>
+				<textarea name="info" rows="3" cols="57"></textarea>
 			</div>
 			
 		</div>

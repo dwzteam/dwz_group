@@ -2,7 +2,7 @@
 // 用户模型
 class UserModel extends CommonModel {
 	public $_validate	=	array(
-		array('account','/^[a-z]\w{3,}$/i','帐号格式错误'),
+		array('account','/^[a-z]\w{3,}$/i','帐号格式错误, 4位以上字母开头'),
 		array('password','require','密码必须'),
 		array('nickname','require','昵称必须'),
 		array('repassword','require','确认密码必须'),

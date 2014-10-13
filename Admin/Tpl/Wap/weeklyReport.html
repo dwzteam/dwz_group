@@ -8,9 +8,14 @@
 
 <div>
 	<div class="pageHeader" docked="true">
-		<a href="#weeklyreport/{$lastMonday|date='Y-m-d',###}" class="button"><span>&lt;&lt;</span></a>
+		<a href="#weeklyreport/{$lastMonday|date='Y-m-d',###}/{$_REQUEST['department']}" class="button"><span>&lt;&lt;</span></a>
 		<span class="subTitle">{$weekMonday}<span style="color:red;margin-left: 5px">(周一)</span></span>
-		<a href="#weeklyreport/{$nextMonday|date='Y-m-d',###}" class="button"><span>&gt;&gt;</span></a>
+		<a href="#weeklyreport/{$nextMonday|date='Y-m-d',###}/{$_REQUEST['department']}" class="button"><span>&gt;&gt;</span></a>
+		<select name="department" onchange="window.location='#weeklyreport/{$weekMonday}/'+this.value;">
+			<volist name='Think.config.departments' id="department">
+				<option value="{$key}" <?php echo $key == $_REQUEST['department'] ? 'selected' : '' ?>>{$department}</option>
+			</volist>
+		</select>
 	</div>
 
 	<div class="pageContent">

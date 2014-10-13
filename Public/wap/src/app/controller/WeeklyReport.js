@@ -15,14 +15,15 @@ Ext.define('app.controller.WeeklyReport', {
 		control: {
 		},
 		routes: {
+			'weeklyreport/:weekMonday/:department':'show',
 			'weeklyreport/:weekMonday':'show',
 			'weeklyreport':'show'
 		}
 	},
 
-	show:function(weekMonday){
+	show:function(weekMonday, department){
 		var me = this,
-			params = {department: UserInfo.department};
+			params = {department: department||UserInfo.department};
 		if (weekMonday) params.weekMonday = weekMonday;
 
 		Ext.Ajax.request({

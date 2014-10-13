@@ -111,10 +111,6 @@ Ext.define('app.view.Main', {
 						loadNextPage: function(){
 							var store = Ext.getStore('DailyTaskStore');
 							store.nextPage();
-
-							if (store.getAllCount() == 0) {
-								store.currentPage--;
-							}
 						}
 
 					}

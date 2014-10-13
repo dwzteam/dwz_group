@@ -2,10 +2,10 @@
 class DailyTaskAction extends CommonAction {
 	//过滤查询字段
 	function _filter(&$map){
-        if ($_POST['content']) {
+        if (!empty($_POST['content'])) {
             $map['content'] = array('like',"%".$_POST['content']."%");
         }
-        if ($_POST['keywords']) {
+        if (!empty($_POST['keywords'])) {
             $map['_string'] = 'content like \'%'.$_POST['keywords'].'%\' or nickname like \''.$_POST['keywords'].'%\''
                 .' or account like \''.$_POST['keywords'].'%\'';
         }

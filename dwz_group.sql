@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.6.14)
 # Database: dwz_group
-# Generation Time: 2014-08-31 02:45:01 +0000
+# Generation Time: 2014-10-13 02:05:29 +0000
 # ************************************************************
 
 
@@ -120,7 +120,8 @@ VALUES
 	(17,2,'DWZ组件前端JS编码\r\n...','2014-03-05',3,1394256671,1395973388),
 	(18,2,'1）ThinkPHP + jUI整合应用\r\n2）Zend Framework + jUI整合应用','2014-03-07',5,1394256819,1395973170),
 	(19,2,'PHP开发DWZ工作日志系统','2014-03-08',6,1394256889,1395138872),
-	(20,2,'1）research C++ TinyXML parse an XML form string\r\n2）调整iQ-Energy App离线计算接口，把参数传递xmlPath改成xmlContent\r\n3）协助iQ-Energy App离线计算C++接口定义\r\n4）起草技术培训计划\r\n5）起草计算引擎技术支持计划','2014-05-31',6,1401509890,1401509897);
+	(20,2,'1）research C++ TinyXML parse an XML form string\r\n2）调整iQ-Energy App离线计算接口，把参数传递xmlPath改成xmlContent\r\n3）协助iQ-Energy App离线计算C++接口定义\r\n4）起草技术培训计划\r\n5）起草计算引擎技术支持计划','2014-05-31',6,1401509890,1401509897),
+	(21,2,'#DWZ工作日志系统手机版\n1）服务端\n2）客户端','2014-08-31',7,1409454130,1409525926);
 
 /*!40000 ALTER TABLE `daily_task` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -288,7 +289,7 @@ CREATE TABLE `user` (
   `verify` varchar(32) DEFAULT NULL,
   `email` varchar(50) NOT NULL,
   `qq` varchar(20) DEFAULT NULL,
-  `remark` varchar(255) NOT NULL,
+  `phone` varchar(50) DEFAULT '',
   `create_time` int(11) unsigned NOT NULL,
   `update_time` int(11) unsigned NOT NULL,
   `status` tinyint(1) DEFAULT '0',
@@ -302,10 +303,10 @@ CREATE TABLE `user` (
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
 
-INSERT INTO `user` (`id`, `account`, `nickname`, `password`, `bind_account`, `last_login_time`, `last_login_ip`, `login_count`, `verify`, `email`, `qq`, `remark`, `create_time`, `update_time`, `status`, `type_id`, `info`, `department`)
+INSERT INTO `user` (`id`, `account`, `nickname`, `password`, `bind_account`, `last_login_time`, `last_login_ip`, `login_count`, `verify`, `email`, `qq`, `phone`, `create_time`, `update_time`, `status`, `type_id`, `info`, `department`)
 VALUES
 	(1,'admin','管理员','21232f297a57a5a743894a0e4a801fc3','',1409295634,'127.0.0.1',16,'8888','support@j-ui.com',NULL,'备注信息',1222907803,1239977420,1,0,'',NULL),
-	(2,'z','张慧华','e10adc3949ba59abbe56e057f20f883e','',1409411464,'127.0.0.1',21,NULL,'z@j-ui.com','350863780','',1393949054,1395211963,1,0,'','1'),
+	(2,'z','张慧华','e10adc3949ba59abbe56e057f20f883e','',1409787273,'127.0.0.1',22,NULL,'z@j-ui.com','350863780','13621397091',1393949054,1413165671,1,0,'','1'),
 	(3,'w','吴平','e10adc3949ba59abbe56e057f20f883e','',1394200646,'127.0.0.1',0,NULL,'w@j-ui.com','465046815','',1393949111,1394160531,1,0,'','1'),
 	(4,'d','杜权','e10adc3949ba59abbe56e057f20f883e','',1394173966,'127.0.0.1',0,NULL,'d@j-ui.com','8560685','',1394173790,0,1,0,'','1');
 

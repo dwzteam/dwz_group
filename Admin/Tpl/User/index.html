@@ -5,8 +5,16 @@
 	<div class="searchBar">
 		<ul class="searchContent">
 			<li>
-				<label>用户名：</label>
-				<input type="text" name="account" value=""/>
+				<label>部门：</label>
+				<select name="department" class="required combox" onchange="$(this).parents('form:first').submit()">
+					<volist name='Think.config.departments' id="department">
+						<option value="{$key}" <?php echo $key == $_REQUEST['department'] ? 'selected' : '' ?>>{$department}</option>
+					</volist>
+				</select>
+			</li>
+			<li>
+				<label>关键字：</label>
+				<input type="text" name="keywords" value="{$_REQUEST['keywords']}" alt="搜索条件"/>
 			</li>
 		</ul>
 		<div class="subBar">
@@ -35,6 +43,8 @@
 			<th width="100" orderField="account" <if condition="$_REQUEST._order eq 'account'">class="{$_REQUEST._sort}"</if>>用户名</th>
 			<th orderField="nickname" <if condition="$_REQUEST._order eq 'nickname'">class="{$_REQUEST._sort}"</if>>昵称</th>
 			<th orderField="email" <if condition="$_REQUEST._order eq 'email'">class="{$_REQUEST._sort}"</if>>Email</th>
+			<th orderField="phone" <if condition="$_REQUEST._order eq 'phone'">class="{$_REQUEST._sort}"</if>>电话</th>
+			<th orderField="qq" <if condition="$_REQUEST._order eq 'qq'">class="{$_REQUEST._sort}"</if>>QQ</th>
 			<th width="100" orderField="department" <if condition="$_REQUEST._order eq 'department'">class="{$_REQUEST._sort}"</if>>部门</th>
 			<th width="120" orderField="last_login_time" <if condition="$_REQUEST._order eq 'last_login_time'">class="{$_REQUEST._sort}"</if>>上次登录</th>
 			<th width="80" orderField="login_count" <if condition="$_REQUEST._order eq 'login_count'">class="{$_REQUEST._sort}"</if>>登录次数</th>
@@ -47,6 +57,8 @@
 				<td>{$vo['account']}</td>
 				<td>{$vo['nickname']}</td>
 				<td>{$vo['email']}</td>
+				<td>{$vo['phone']}</td>
+				<td>{$vo['qq']}</td>
 				<td>{$vo['department']|C='departments.'.###}</td>
 				<td>{$vo['last_login_time']|date="Y-m-d H:i:s",###}</td>
 				<td>{$vo['login_count']}</td>

@@ -6,9 +6,10 @@
 	<div class="accordionContent">
 	
 		<ul class="tree treeFolder">
-			<volist id="item" name="menu" >
 			<li><a href="__APP__/DailyTask/weeklyReport/department/{$_SESSION[C('USER_AUTH_KEY')]|attrById='user','department',###}" target="navTab" rel="DailyTask"><span>查看工作周报</span></a></li>
-            <if condition="$item['group_id'] eq 2">
+
+			<volist id="item" name="menu" >
+			<if condition="$item['group_id'] eq 2">
 			<eq name="item['access']" value="1">
 				<li><a href="__APP__/{$item['name']}/index/" target="navTab" rel="{$item['name']}">{$item['title']}</a></li>
 			</eq>

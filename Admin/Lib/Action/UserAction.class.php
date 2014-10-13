@@ -3,7 +3,15 @@
 class UserAction extends CommonAction {
 	function _filter(&$map){
 		$map['id'] = array('egt',2);
-		$map['account'] = array('like',"%".$_POST['account']."%");
+
+		if (!empty($_POST['account'])) {
+			$map['account'] = array('like',"%".$_POST['account']."%");
+		}
+
+		if (!empty($_POST['keywords'])) {
+			$map['_string'] = 'phone like \'%'.$_POST['keywords'].'%\' or nickname like \''.$_POST['keywords'].'%\''
+				.' or account like \''.$_POST['keywords'].'%\'';
+		}
 	}
 	// 检查帐号
 	public function checkAccount() {
