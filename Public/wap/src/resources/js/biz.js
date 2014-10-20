@@ -4,8 +4,8 @@
 
 var SystemInfo = {
 	buildNo:'v1.0',
-	ENV:'DEV',
-	baseUrl:{DEV:'/dwz_group/Admin/index.php', LIVE:'/Admin'},
+	ENV:'LIVE',
+	baseUrl:{DEV:'../../../Admin/index.php', LIVE:'../../../Admin/index.php'},
 	isWebApp:function(){ // Not Hybird App
 		return !Ext.device || 'anonymous' == Ext.device.Device.uuid.toLowerCase();
 	}
