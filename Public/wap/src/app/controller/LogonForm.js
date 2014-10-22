@@ -54,7 +54,11 @@ Ext.define('app.controller.LogonForm', {
 					UserInfo.nickname = json.user.nickname;
 					UserInfo.department = json.user.department;
 
-					localStorage.setItem('APP_USER_INFO', JSON.stringify(UserInfo));
+					try {
+						localStorage.setItem('APP_USER_INFO', JSON.stringify(UserInfo));
+					} catch(e){
+						console.log('只有在用户自身开启non-private mode的情况下才可以正常使用Local Storage:'+JSON.stringify(UserInfo));
+					}
 
 					me.getSys_info().set('title', UserInfo.nickname);
 					me.redirectTo('main');
