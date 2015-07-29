@@ -147,7 +147,7 @@ $(function(){
 3）根据晨会沟通，调整工作日志
 </pre>
                             </fieldset>
-
+<?php if(!empty($_SESSION[C('ADMIN_AUTH_KEY')])) { ?>
                             <fieldset class="nowrap">
                                 <legend>系统使用帮助</legend>
 <pre>
@@ -166,7 +166,7 @@ $(function(){
 3）用户登入，开始使用工作日志系统
 </pre>
                             </fieldset>
-
+<?php } ?>
 						</div>
 
 					</div>
