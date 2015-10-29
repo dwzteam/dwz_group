@@ -173,5 +173,16 @@ function setGroupActions($groupId,$actionIdList)
         return $value;
     }
 
+	function delGroupUserByUser($userId)
+	{
+		$table = $this->tablePrefix.'role_user';
+
+		$result = $this->db->execute('delete from '.$table.' where user_id='.$userId);
+		if($result===false) {
+			return false;
+		}else {
+			return true;
+		}
+	}
 }
 ?>

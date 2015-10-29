@@ -29,7 +29,7 @@
 <div class="pageContent">
 	<div class="panelBar">
 		<ul class="toolBar">
-			<li><a class="add" href="__URL__/add" target="dialog" mask="true"><span>新增</span></a></li>
+			<li><a class="add" href="__URL__/add" target="dialog" mask="true" height="380"><span>新增</span></a></li>
 			<li><a class="delete" href="__URL__/foreverdelete/id/{sid_user}/navTabId/__MODULE__" target="ajaxTodo" title="你确定要删除吗？" warn="请选择用户"><span>删除</span></a></li>
 			<li><a class="edit" href="__URL__/edit/id/{sid_user}" target="dialog" mask="true" warn="请选择用户" height="380"><span>编辑</span></a></li>
 			<li class="line">line</li>
@@ -62,7 +62,11 @@
 				<td>{$vo['department']|C='departments.'.###}</td>
 				<td>{$vo['last_login_time']|date="Y-m-d H:i:s",###}</td>
 				<td>{$vo['login_count']}</td>
-				<td>{$vo['status']|showStatus=$vo['id']}</td>
+				<td>{$vo['status']|showStatus=$vo['id']}
+					<?php if ($_SESSION['administrator']) {
+					echo ' | <a href="__URL__/role/id/'.$vo['id'].'" target="dialog" mask="true" title="'.$vo['nickname'].' 授权 ">授权 </a>';
+					} ?>
+				</td>
 			</tr>
 		</volist>
 		</tbody>

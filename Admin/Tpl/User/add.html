@@ -15,23 +15,26 @@ function checkName(){
 
 			<div class="unit">
 				<label>用户名：</label>
-				<input type="text" class="required" size="30" maxlength="20" name="account">
+				<input type="text" class="required alphanumeric" size="28" maxlength="20" name="account">
 			</div>
             <div class="unit">
                 <label>昵称：</label>
-                <input type="text" class="required" name="nickname">
+                <input type="text" class="required" size="28" name="nickname">
             </div>
 			<div class="unit">
-				<label>Password：</label>
-				<input type="text" name="password" size="30" maxlength="20" class="required alphanumeric">
+				<label>密码：</label>
+				<input id="__MODULE__password" type="password" name="password" size="28" maxlength="20" class="required alphanumeric">
 			</div>
 			<div class="unit">
+				<label>确认密码：</label>
+				<input type="password" name="password" size="28" maxlength="20" class="required alphanumeric" equalto="#__MODULE__password">
+			<div class="unit">
 				<label>Email：</label>
-				<input type="text" name="email" size="30" maxlength="100" class="email">
+				<input type="text" name="email" size="28" maxlength="100" class="email">
 			</div>
 			<div class="unit">
 				<label>QQ：</label>
-				<input type="text" name="qq" size="30" maxlength="100">
+				<input type="text" name="qq" size="28" maxlength="100">
 			</div>
 			<div class="unit">
 				<label>电话：</label>

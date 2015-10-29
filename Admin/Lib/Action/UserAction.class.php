@@ -48,6 +48,11 @@ class UserAction extends CommonAction {
     //重置密码
     public function resetPwd()
     {
+        //对表单提交处理进行处理或者增加非表单数据
+        if(md5($_POST['verify'])	!= $_SESSION['verify']) {
+            $this->error('验证码错误！');
+        }
+
     	$id  =  $_POST['id'];
         $password = $_POST['password'];
         if(''== trim($password)) {
@@ -71,6 +76,9 @@ class UserAction extends CommonAction {
             $pk = $model->getPk ();
             $id = $_REQUEST [$pk];
             if (isset ( $id )) {
+
+                D("Role")->delGroupUserByUser($id); // zhanghuihua20150519
+
                 // check role_user
                 if ($model->hasRole($id)){
                     $this->error ('删除失败,必须先删除此用户与角色的关联关系！');
@@ -92,6 +100,57 @@ class UserAction extends CommonAction {
             }
         }
         $this->forward ();
+    }
+
+
+    public function role()
+    {
+        //读取系统的Role列表
+        $role    =   D("Role");
+        $roleWhere = 'status=1';
+        if (!$_SESSION['administrator']) {
+            $roleWhere .= ' and id<7';
+        }
+        $list2=$role->where($roleWhere)->field('id,name')->select();
+        //echo $role->getlastsql();
+        //dump(	$role);
+        foreach ($list2 as $vo){
+            $roleList[$vo['id']]	=	$vo['name'];
+        }
+
+        //获取当前用户组信息
+        $userId =  isset($_GET['id'])?$_GET['id']:'';
+        $groupRoleList = array();
+        if(!empty($userId)) {
+            $this->assign("selectUserId",$userId);
+            //获取当前组的用户列表
+            $user = D('User');
+            $list	=	$user->getGroupUserList($userId);
+
+            foreach ($list as $vo){
+                $groupRoleList[$vo['id']]	=	$vo['id'];
+            }
+
+        }
+        $this->assign('groupRoleList',$groupRoleList);
+        $this->assign('roleList',$roleList);
+        $this->display();
+
+        return;
+    }
+
+    public function setRole()
+    {
+        $ids     = $_POST['groupRoleId'];
+        $userId	=	$_POST['userId'];
+        $user    =   D("User");
+        $user->delGroupUser($userId);
+        $result = $user->setGroupUsers($userId,$ids);
+        if($result===false) {
+            $this->error('授权失败！');
+        }else {
+            $this->success('授权成功！');
+        }
     }
 }
 ?>

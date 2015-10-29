@@ -327,6 +327,7 @@ table.list .selected {background-color:#7cc5e5;border-color:#b8d0d6; }
 table.list a {color:#3C7FB1; font-size:11px; line-height:20px;}
 table.list a:hover {text-decoration:underline; line-height:20px;}
 table.list td span.error {z-index:-1}
+table.list a { color: #3C7FB1; font-size: 11px; line-height: 20px;}
 table.nowrap tbody tr {border-bottom:solid 1px #ededed;}
 
 /* Taskbar */
