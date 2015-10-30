@@ -43,6 +43,6 @@ jUI富客户端框架在线demo： http://j-ui.com/
 <img src="/doc/pic/2.jpg" width="320">
 <img src="/doc/pic/3.jpg" width="320">
 <img src="/doc/pic/4.jpg" width="320">
-<img src="/doc/pic/5.jpg" width="320">
+<img src="/doc/pic/5.jpg" height="320">
 
 
