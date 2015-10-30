@@ -1,0 +1,1093 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1b126ce8-66fa-4fb0-90ec-8ccaffee1c78" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
+    <ignored path="dwz_group.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path="$PROJECT_DIR$/.idea/" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="dwz_group" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="UserModel.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Admin/Lib/Model/UserModel.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1363" max-vertical-offset="1875">
+              <caret line="117" column="5" selection-start-line="117" selection-start-column="5" selection-end-line="117" selection-end-column="5" />
+              <folding>
+                <marker date="1446128011000" expanded="true" signature="884:929" placeholder="select role_.._table where..." />
+                <marker date="1446128011000" expanded="true" signature="1166:1206" placeholder="select id fr.._table where..." />
+                <marker date="1446128011000" expanded="true" signature="1411:1546" placeholder="select id, a.._this_tablePrefixuser where..." />
+                <marker date="1446128011000" expanded="true" signature="2025:2134" placeholder="select b.id,.._table as..." />
+                <marker date="1446128011000" expanded="true" signature="2279:2316" placeholder="delete from ..." />
+                <marker date="1446128011000" expanded="true" signature="2774:2924" placeholder="INSERT INTO ..." />
+                <marker date="1446128011000" expanded="true" signature="2836:2924" placeholder="SELECT a.id,.._this_tablePrefixrole a..." />
+                <marker date="1446128011000" expanded="true" signature="3018:3168" placeholder="INSERT INTO ..." />
+                <marker date="1446128011000" expanded="true" signature="3080:3168" placeholder="SELECT a.id,.._this_tablePrefixrole a..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="password.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Admin/Tpl/Public/password.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="705">
+              <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#div#3;n#div#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserAction.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Admin/Lib/Action/UserAction.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1666" max-vertical-offset="2415">
+              <caret line="127" column="47" selection-start-line="127" selection-start-column="31" selection-end-line="127" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RoleModel.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Admin/Lib/Model/RoleModel.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="2251" max-vertical-offset="2895">
+              <caret line="185" column="5" selection-start-line="185" selection-start-column="5" selection-end-line="185" selection-end-column="5" />
+              <folding>
+                <marker date="1446127783000" expanded="true" signature="485:656" placeholder="INSERT INTO ..." />
+                <marker date="1446127783000" expanded="true" signature="554:656" placeholder="SELECT a.id,.._this_tablePrefixrole a..." />
+                <marker date="1446127783000" expanded="true" signature="807:954" placeholder="select b.id,.._this_tablePrefixaccess as..." />
+                <marker date="1446127783000" expanded="true" signature="1096:1145" placeholder="delete from ..." />
+                <marker date="1446127783000" expanded="true" signature="1350:1418" placeholder="delete from ..." />
+                <marker date="1446127783000" expanded="true" signature="1621:1759" placeholder="select b.id,.._table as..." />
+                <marker date="1446127783000" expanded="true" signature="2081:2252" placeholder="INSERT INTO ..." />
+                <marker date="1446127783000" expanded="true" signature="2150:2252" placeholder="SELECT a.id,.._this_tablePrefixrole a..." />
+                <marker date="1446127783000" expanded="true" signature="2461:2532" placeholder="delete from ..." />
+                <marker date="1446127783000" expanded="true" signature="2755:2897" placeholder="select b.id,.._table as..." />
+                <marker date="1446127783000" expanded="true" signature="3225:3396" placeholder="INSERT INTO ..." />
+                <marker date="1446127783000" expanded="true" signature="3294:3396" placeholder="SELECT a.id,.._this_tablePrefixrole a..." />
+                <marker date="1446127783000" expanded="true" signature="3606:3727" placeholder="select b.id,.._table as..." />
+                <marker date="1446127783000" expanded="true" signature="3874:3911" placeholder="delete from ..." />
+                <marker date="1446127783000" expanded="true" signature="4052:4147" placeholder="INSERT INTO ..." />
+                <marker date="1446127783000" expanded="true" signature="4629:4779" placeholder="INSERT INTO ..." />
+                <marker date="1446127783000" expanded="true" signature="4691:4779" placeholder="SELECT a.id,.._this_tablePrefixrole a..." />
+                <marker date="1446127783000" expanded="true" signature="5302:5339" placeholder="delete from ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="615">
+              <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Admin/Tpl/Index/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="2820">
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="git.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/git.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="495">
+              <caret line="1" column="59" selection-start-line="1" selection-start-column="59" selection-end-line="1" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.30066815" vertical-offset="0" max-vertical-offset="449">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LICENSE.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LICENSE.txt">
+          <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="495">
+              <caret line="13" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Admin/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="285">
+              <caret line="13" column="2" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Admin/Tpl/User/add.html" />
+        <option value="$PROJECT_DIR$/Admin/Tpl/User/edit.html" />
+        <option value="$PROJECT_DIR$/Public/dwz/themes/css/core.css" />
+        <option value="$PROJECT_DIR$/Admin/Tpl/User/index.html" />
+        <option value="$PROJECT_DIR$/Admin/Tpl/Public/password.html" />
+        <option value="$PROJECT_DIR$/Admin/Lib/Action/UserAction.class.php" />
+        <option value="$PROJECT_DIR$/Admin/Lib/Model/RoleModel.class.php" />
+        <option value="$PROJECT_DIR$/Admin/Lib/Model/UserModel.class.php" />
+        <option value="$PROJECT_DIR$/Admin/index.php" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/Admin/Tpl/Index/index.html" />
+        <option value="$PROJECT_DIR$/git.txt" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+      </list>
+    </option>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="826" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>CoffeeScript</id>
+          </State>
+          <State>
+            <id>Control flow issuesJavaScript</id>
+          </State>
+          <State>
+            <id>Data flow issuesJavaScript</id>
+          </State>
+          <State>
+            <id>Error handlingJavaScript</id>
+          </State>
+          <State>
+            <id>JavaScript</id>
+          </State>
+          <State>
+            <id>PHP</id>
+          </State>
+          <State>
+            <id>Potentially confusing code constructsJavaScript</id>
+          </State>
+          <State>
+            <id>Probable bugsCoffeeScript</id>
+          </State>
+          <State>
+            <id>Probable bugsJavaScript</id>
+          </State>
+          <State>
+            <id>UndefinedPHP</id>
+          </State>
+          <State>
+            <id>XPath</id>
+          </State>
+        </expanded-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dwz_group" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dwz_group" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dwz_group" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dwz_group" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dwz_group" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ThinkPHP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dwz_group" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dwz_group" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dwz_group" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dwz_group" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="options.lastSelected" value="web-ide.project.structure" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="FullScreen" value="false" />
+    <property name="SearchEverywhereHistory" value="" />
+    <property name="recentsLimit" value="5" />
+    <property name="dynamic.classpath" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/Public/xheditor" />
+      <recent name="$PROJECT_DIR$/Public/dwz/js" />
+      <recent name="$PROJECT_DIR$/Admin/Tpl/User" />
+      <recent name="$PROJECT_DIR$/Public/wap" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Admin/Home" />
+    </key>
+  </component>
+  <component name="RunManager" selected="PHP Script.Action.class.php">
+    <configuration default="false" name="Action.class.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/ThinkPHP3.1/Lib/Core/Action.class.php">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="PHP Script.Action.class.php" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="PHP Script.Action.class.php" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" myUseAcceleration="nothing">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1b126ce8-66fa-4fb0-90ec-8ccaffee1c78" name="Default" comment="" />
+      <created>1394453056290</created>
+      <option name="number" value="Default" />
+      <updated>1394453056290</updated>
+    </task>
+    <task id="LOCAL-00001" summary="DB_HOST">
+      <created>1394455914040</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1394455914040</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Fixed bugs">
+      <created>1394500313097</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1394500313097</updated>
+    </task>
+    <task id="LOCAL-00003" summary="PHP配制注意事项">
+      <created>1394503621147</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1394503621147</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Ctrl + Enter onkeydown事件提交表单">
+      <created>1394591243568</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1394591243568</updated>
+    </task>
+    <task id="LOCAL-00005" summary="控制修改跨部门工作日志">
+      <created>1394594102877</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1394594102877</updated>
+    </task>
+    <task id="LOCAL-00006" summary="部门联动查询">
+      <created>1394761624766</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1394761624767</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Reload">
+      <created>1394764457465</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1394764457465</updated>
+    </task>
+    <task id="LOCAL-00008" summary="css">
+      <created>1395020059714</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1395020059714</updated>
+    </task>
+    <task id="LOCAL-00009" summary="control session time out">
+      <created>1395139460453</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1395139460453</updated>
+    </task>
+    <task id="LOCAL-00010" summary="weekly report css">
+      <created>1395972276400</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1395972276400</updated>
+    </task>
+    <task id="LOCAL-00011" summary="weekly report">
+      <created>1395972786581</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1395972786581</updated>
+    </task>
+    <task id="LOCAL-00012" summary="weekly summary 周总结">
+      <created>1396321026545</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1396321026545</updated>
+    </task>
+    <task id="LOCAL-00013" summary="weekly summary 周总结">
+      <created>1396336673583</created>
+      <option name="number" value="00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1396336673583</updated>
+    </task>
+    <task id="LOCAL-00014" summary="weekly report 去除禁用user">
+      <created>1396494531333</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1396494531333</updated>
+    </task>
+    <task id="LOCAL-00015" summary="css">
+      <created>1396494545521</created>
+      <option name="number" value="00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1396494545521</updated>
+    </task>
+    <task id="LOCAL-00016" summary="IE下弹出层盖住select">
+      <created>1397094159678</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1397094159678</updated>
+    </task>
+    <task id="LOCAL-00017" summary="本周总结">
+      <created>1397094178988</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1397094178988</updated>
+    </task>
+    <task id="LOCAL-00018" summary="fix delete user bugs">
+      <created>1400213102197</created>
+      <option name="number" value="00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1400213102197</updated>
+    </task>
+    <task id="LOCAL-00019" summary="fix delete user bugs">
+      <created>1401784231732</created>
+      <option name="number" value="00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1401784231732</updated>
+    </task>
+    <task id="LOCAL-00020" summary="工作日志系统功能增强：&#10;1) 做了一套手机客户端，方便外出时身边没有电脑，也只可以使用智能手机写工作日志，并查看团队成员工作周报&#10;2) 周报切换上一周/下一周更方便">
+      <created>1409485087341</created>
+      <option name="number" value="00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1409485087341</updated>
+    </task>
+    <task id="LOCAL-00021" summary="1.1.0">
+      <created>1409485890413</created>
+      <option name="number" value="00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1409485890413</updated>
+    </task>
+    <task id="LOCAL-00022" summary="1.1.0">
+      <created>1409486176757</created>
+      <option name="number" value="00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1409486176757</updated>
+    </task>
+    <task id="LOCAL-00023" summary="1.1.0">
+      <created>1409526122157</created>
+      <option name="number" value="00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1409526122157</updated>
+    </task>
+    <task id="LOCAL-00024" summary="1.1.0">
+      <created>1409544843648</created>
+      <option name="number" value="00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1409544843648</updated>
+    </task>
+    <task id="LOCAL-00025" summary="1.1.0">
+      <created>1413176808819</created>
+      <option name="number" value="00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1413176808819</updated>
+    </task>
+    <task id="LOCAL-00026" summary="1.1.0">
+      <created>1413797384055</created>
+      <option name="number" value="00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1413797384055</updated>
+    </task>
+    <task id="LOCAL-00027" summary="1.1.0">
+      <created>1413940973960</created>
+      <option name="number" value="00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1413940973960</updated>
+    </task>
+    <task id="LOCAL-00028" summary="fixed bugs">
+      <created>1438155757558</created>
+      <option name="number" value="00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1438155757558</updated>
+    </task>
+    <task id="LOCAL-00029" summary="页面片段权限控制">
+      <created>1438155845614</created>
+      <option name="number" value="00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1438155845614</updated>
+    </task>
+    <task id="LOCAL-00030" summary="技术支持">
+      <created>1438155863333</created>
+      <option name="number" value="00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1438155863333</updated>
+    </task>
+    <task id="LOCAL-00031" summary="修复bug，并更新到dwz_jui v1.5.1">
+      <created>1446128823743</created>
+      <option name="number" value="00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1446128823743</updated>
+    </task>
+    <task id="LOCAL-00032" summary="修复bug，并更新到dwz_jui v1.5.1">
+      <created>1446131159599</created>
+      <option name="number" value="00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1446131159599</updated>
+    </task>
+    <task id="LOCAL-00033" summary="修复bug，并更新到dwz_jui v1.5.1">
+      <created>1446173022500</created>
+      <option name="number" value="00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1446173022500</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1440" height="826" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32921812" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3160763" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32697546" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31616595" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3269494" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32697546" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32880434" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+    <MESSAGE value="DB_HOST" />
+    <MESSAGE value="Fixed bugs" />
+    <MESSAGE value="PHP配制注意事项" />
+    <MESSAGE value="Ctrl + Enter onkeydown事件提交表单" />
+    <MESSAGE value="控制修改跨部门工作日志" />
+    <MESSAGE value="部门联动查询" />
+    <MESSAGE value="Reload" />
+    <MESSAGE value="control session time out" />
+    <MESSAGE value="weekly report css" />
+    <MESSAGE value="weekly report" />
+    <MESSAGE value="weekly summary 周总结" />
+    <MESSAGE value="weekly report 去除禁用user" />
+    <MESSAGE value="css" />
+    <MESSAGE value="IE下弹出层盖住select" />
+    <MESSAGE value="本周总结" />
+    <MESSAGE value="fix delete user bugs" />
+    <MESSAGE value="工作日志系统功能增强：&#10;1) 做了一套手机客户端，方便外出时身边没有电脑，也只可以使用智能手机写工作日志，并查看团队成员工作周报&#10;2) 周报切换上一周/下一周更方便" />
+    <MESSAGE value="1.1.0" />
+    <MESSAGE value="fixed bugs" />
+    <MESSAGE value="页面片段权限控制" />
+    <MESSAGE value="技术支持" />
+    <MESSAGE value="修复bug，并更新到dwz_jui v1.5.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="修复bug，并更新到dwz_jui v1.5.1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/ThinkPHP/Tpl/page_trace.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1095">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/Lib/TagLib/TagLibHtml.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.2014923" vertical-offset="3030" max-vertical-offset="8535">
+          <caret line="18" column="47" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/siteconfig.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="439">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThinkPHP/Lib/Template/ThinkTemplate.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.18018018" vertical-offset="4110" max-vertical-offset="10440">
+          <caret line="274" column="24" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThinkPHP/Tpl/think_exception.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.625" vertical-offset="45" max-vertical-offset="870">
+          <caret line="12" column="20" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/Tpl/Public/pagerForm.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="165">
+          <caret line="5" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/wap/src/resources/css/misc.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
+          <caret line="19" column="18" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/wap/resources/css/misc.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
+          <caret line="19" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/wap/src/app.manifest">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+          <caret line="1" column="21" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/wap/src/app/view/About.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="235" max-vertical-offset="945">
+          <caret line="45" column="24" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/wap/src/app/view/WeeklyReport.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="780">
+          <caret line="41" column="24" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/wap/src/app/view/DailyTask.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5033113" vertical-offset="657" max-vertical-offset="1110">
+          <caret line="59" column="34" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/wap/src/app/view/Main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1350" max-vertical-offset="1905">
+          <caret line="91" column="54" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/wap/src/app/controller/WeeklyReport.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="900">
+          <caret line="35" column="49" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThinkPHP/Lib/Core/Dispatcher.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.0875576" vertical-offset="0" max-vertical-offset="4035">
+          <caret line="142" column="44" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/Tpl/DailyTask/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1843318" vertical-offset="0" max-vertical-offset="1230">
+          <caret line="8" column="27" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/Lib/Action/IndexAction.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11127596" vertical-offset="0" max-vertical-offset="674">
+          <caret line="5" column="58" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/Tpl/Wap/weeklyReport.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24017467" vertical-offset="135" max-vertical-offset="1020">
+          <caret line="20" column="29" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThinkPHP/Common/runtime.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0058224164" vertical-offset="146" max-vertical-offset="3585">
+          <caret line="18" column="75" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/Lib/Action/NodeAction.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="1500">
+          <caret line="3" column="5" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThinkPHP/Lib/Behavior/ContentReplaceBehavior.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.125" vertical-offset="357" max-vertical-offset="825">
+          <caret line="40" column="40" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/Lib/Action/PublicAction.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2265" max-vertical-offset="4200">
+          <caret line="151" column="21" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/Lib/Action/WapAction.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="4065">
+          <caret line="15" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/Tpl/Public/menu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.75" vertical-offset="0" max-vertical-offset="450">
+          <caret line="22" column="10" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/Conf/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="795">
+          <caret line="18" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/Tpl/DailyTask/weeklyReport.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="1755">
+          <caret line="11" column="16" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/Lib/Action/DailyTaskAction.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="4575">
+          <caret line="7" column="41" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/Tpl/DailyTask/edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="675">
+          <caret line="8" column="12" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dwz_group.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18103448" vertical-offset="69" max-vertical-offset="5340">
+          <caret line="13" column="65" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="255">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/wap/src/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="1905">
+          <caret line="40" column="24" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/wap/src/app/controller/LogonForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="647" max-vertical-offset="1680">
+          <caret line="51" column="16" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/wap/app.manifest">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThinkPHP/Lib/Core/Action.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5384" max-vertical-offset="6255">
+          <caret line="379" column="57" selection-start-line="379" selection-start-column="47" selection-end-line="379" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/wap/src/resources/js/biz.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/Tpl/User/add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.875" vertical-offset="150" max-vertical-offset="1245">
+          <caret line="21" column="61" selection-start-line="21" selection-start-column="61" selection-end-line="21" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/Tpl/User/edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.958333" vertical-offset="361" max-vertical-offset="1140">
+          <caret line="48" column="59" selection-start-line="48" selection-start-column="59" selection-end-line="48" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/constants.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="240">
+          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/dwz/themes/css/core.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.407408" vertical-offset="4519" max-vertical-offset="9345">
+          <caret line="329" column="66" selection-start-line="329" selection-start-column="66" selection-end-line="329" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/Tpl/User/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.708333" vertical-offset="661" max-vertical-offset="1350">
+          <caret line="66" column="29" selection-start-line="66" selection-start-column="29" selection-end-line="66" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/Tpl/User/password.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/Tpl/Public/password.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="705">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#3;n#div#0;n#form#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/Lib/Model/RoleModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2251" max-vertical-offset="2895">
+          <caret line="185" column="5" selection-start-line="185" selection-start-column="5" selection-end-line="185" selection-end-column="5" />
+          <folding>
+            <marker date="1446127783000" expanded="true" signature="485:656" placeholder="INSERT INTO ..." />
+            <marker date="1446127783000" expanded="true" signature="554:656" placeholder="SELECT a.id,.._this_tablePrefixrole a..." />
+            <marker date="1446127783000" expanded="true" signature="807:954" placeholder="select b.id,.._this_tablePrefixaccess as..." />
+            <marker date="1446127783000" expanded="true" signature="1096:1145" placeholder="delete from ..." />
+            <marker date="1446127783000" expanded="true" signature="1350:1418" placeholder="delete from ..." />
+            <marker date="1446127783000" expanded="true" signature="1621:1759" placeholder="select b.id,.._table as..." />
+            <marker date="1446127783000" expanded="true" signature="2081:2252" placeholder="INSERT INTO ..." />
+            <marker date="1446127783000" expanded="true" signature="2150:2252" placeholder="SELECT a.id,.._this_tablePrefixrole a..." />
+            <marker date="1446127783000" expanded="true" signature="2461:2532" placeholder="delete from ..." />
+            <marker date="1446127783000" expanded="true" signature="2755:2897" placeholder="select b.id,.._table as..." />
+            <marker date="1446127783000" expanded="true" signature="3225:3396" placeholder="INSERT INTO ..." />
+            <marker date="1446127783000" expanded="true" signature="3294:3396" placeholder="SELECT a.id,.._this_tablePrefixrole a..." />
+            <marker date="1446127783000" expanded="true" signature="3606:3727" placeholder="select b.id,.._table as..." />
+            <marker date="1446127783000" expanded="true" signature="3874:3911" placeholder="delete from ..." />
+            <marker date="1446127783000" expanded="true" signature="4052:4147" placeholder="INSERT INTO ..." />
+            <marker date="1446127783000" expanded="true" signature="4629:4779" placeholder="INSERT INTO ..." />
+            <marker date="1446127783000" expanded="true" signature="4691:4779" placeholder="SELECT a.id,.._this_tablePrefixrole a..." />
+            <marker date="1446127783000" expanded="true" signature="5302:5339" placeholder="delete from ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/Lib/Action/UserAction.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1666" max-vertical-offset="2415">
+          <caret line="127" column="47" selection-start-line="127" selection-start-column="31" selection-end-line="127" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/Lib/Model/UserModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1363" max-vertical-offset="1875">
+          <caret line="117" column="5" selection-start-line="117" selection-start-column="5" selection-end-line="117" selection-end-column="5" />
+          <folding>
+            <marker date="1446128011000" expanded="true" signature="884:929" placeholder="select role_.._table where..." />
+            <marker date="1446128011000" expanded="true" signature="1166:1206" placeholder="select id fr.._table where..." />
+            <marker date="1446128011000" expanded="true" signature="1411:1546" placeholder="select id, a.._this_tablePrefixuser where..." />
+            <marker date="1446128011000" expanded="true" signature="2025:2134" placeholder="select b.id,.._table as..." />
+            <marker date="1446128011000" expanded="true" signature="2279:2316" placeholder="delete from ..." />
+            <marker date="1446128011000" expanded="true" signature="2774:2924" placeholder="INSERT INTO ..." />
+            <marker date="1446128011000" expanded="true" signature="2836:2924" placeholder="SELECT a.id,.._this_tablePrefixrole a..." />
+            <marker date="1446128011000" expanded="true" signature="3018:3168" placeholder="INSERT INTO ..." />
+            <marker date="1446128011000" expanded="true" signature="3080:3168" placeholder="SELECT a.id,.._this_tablePrefixrole a..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="285">
+          <caret line="13" column="2" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="615">
+          <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/Tpl/Index/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="2820">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LICENSE.txt">
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="495">
+          <caret line="13" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/git.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="495">
+          <caret line="1" column="59" selection-start-line="1" selection-start-column="59" selection-end-line="1" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30066815" vertical-offset="0" max-vertical-offset="449">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
