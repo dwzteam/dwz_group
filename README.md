@@ -36,15 +36,13 @@ jUI富客户端框架在线demo： http://j-ui.com/
 
 ## DWZ工作日志系统截屏
 
-电脑屏幕截屏
+### 电脑屏幕截屏
 <img src="/doc/pic/1.jpg">
 
----
-
-手机屏幕截屏
-<img src="/doc/pic/2.jpg">
-<img src="/doc/pic/3.jpg">
-<img src="/doc/pic/4.jpg">
-<img src="/doc/pic/5.jpg">
+### 手机屏幕截屏
+<img src="/doc/pic/2.jpg" width="320">
+<img src="/doc/pic/3.jpg" width="320">
+<img src="/doc/pic/4.jpg" width="320">
+<img src="/doc/pic/5.jpg" width="320">
 
 
