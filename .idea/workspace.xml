@@ -612,7 +612,13 @@
       <option name="project" value="LOCAL" />
       <updated>1446173022500</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="修复bug，并更新到dwz_jui v1.5.1">
+      <created>1446173146313</created>
+      <option name="number" value="00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1446173146313</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="ToolWindowManager">
