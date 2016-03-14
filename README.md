@@ -21,6 +21,8 @@
 	注意：配制完成后，如果浏览器访问报错，请检查php.ini配制中mysql相关extension是否放开.
 	如果登入验证码无法显示请检查是否已经开启GD库支持【命令行输入: php -i | grep -i --color gd】
 
+	因为ThinkPHP路径支持多种配置，解决手机端不能登录问题需要修改JS配置文件(/dwz_group/Public/wap/resources/js/biz.js)中路径 baseUrl:{DEV:'../../../Admin/index.php', LIVE:'../../../Admin/index.php'}
+
 jUI富客户端框架在线demo： http://j-ui.com/
 
 技术支持：0571-88517625	17767167745
