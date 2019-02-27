@@ -15,10 +15,21 @@ class BranchAction extends CommonAction {
 	}
 
     public function _before_patch() {
-
     }
 	public function _before_edit() {
 	}
+    public function _before_delete() {
+    }
+
+    public function _before_foreverdelete() {
+        $model = M ('DailyTask');
+        $id = $_REQUEST ['id'];
+        $where ['bid'] = $id;
+        $info = $model->where ( $where )->select ();
+        if ($info){
+            $this->error('请先删除该业务下的周报');
+        }
+    }
 
     /**
      +----------------------------------------------------------
