@@ -1,9 +1,7 @@
 <div class="pageContent">
 
 	<form method="post" action="__URL__/insert/navTabId/__MODULE__?callbackType=closeCurrent" class="pageForm required-validate" onsubmit="return validateCallback(this, dialogAjaxMenu)">
-		<input type="hidden" name="user_id" value="<?php echo $_SESSION[C('USER_AUTH_KEY')] ?>"/> 
-		<input type="hidden" name="level" value="{$level}">
-		<input type="hidden" name="pid" value="{$pid}">
+		<input type="hidden" name="user_id" value="<?php echo $_SESSION[C('USER_AUTH_KEY')] ?>"/>
 		<div class="pageFormContent" layoutH="58">
 			<div class="unit">
 				<label>业务代码(git+业务)：</label>
