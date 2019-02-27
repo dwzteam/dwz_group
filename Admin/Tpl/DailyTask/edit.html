@@ -11,6 +11,7 @@
 				<dt>昵称：</dt>
 				<dd><input type="text" name="nickname" value="{$vo.user_id|attrById='user','nickname',###}" disabled></dd>
 			</dl>
+
             <dl>
                 <dt>日期：</dt>
                 <dd>
@@ -19,12 +20,23 @@
 					<a class="unit" style="font-weight: bold; color:red;" href="__URL__/edit/user_id/{$vo.user_id}/task_date/{dailyTask_taskDate}" target="navTab" rel="DailyTaskOpt" title="写工作日志"><span>Reload</span></a>
 				</dd>
             </dl>
+
+			<dl>
+				<dt>业务：</dt>
+				<dd>
+					<select name="bid" class="required">
+						<option value="">请选择</option>
+						<voList name="branch" id="br" key="$key">
+							<option value="{$br.id}" <?php if ($br['id']==$vo['bid']){ ?>selected<?php };?>>{$br.title}||{$br.username}</option>
+						</voList>
+					</select>
+				</dd>
+			</dl>
             <dl class="nowrap">
                 <dt>内容：</dt>
                 <dd><textarea class="required" name="content" rows="10" cols="85" onkeydown="checkTextareaFormSubmit(this)">{$vo.content}</textarea>
                 <span class="info">内容：纯文本，一行写一个工作任务，提交快捷键Ctrl+Enter</span></dd>
 			</dl>
-
 		</div>
 		<div class="formBar">
 			<ul>

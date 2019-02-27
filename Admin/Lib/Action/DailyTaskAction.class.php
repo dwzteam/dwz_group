@@ -29,7 +29,6 @@ class DailyTaskAction extends CommonAction {
         }
         $model = new DailyTaskViewModel();
         $this->_list($model, $map, 'task_date', false, 'DailyTask.id');
-
         $this->display();
     }
 
@@ -49,6 +48,12 @@ class DailyTaskAction extends CommonAction {
                 $vo = $map;
             }
         }
+        // 查询业务分组
+        $branch = M('Branch');
+        $map = array();
+        $map['status'] = 1;
+        $sortList   =   $branch->where($map)->order('sort asc')->select();
+        $this->assign("branch",$sortList);
 
         $this->assign ( 'vo', $vo );
         $this->display ();
@@ -57,9 +62,15 @@ class DailyTaskAction extends CommonAction {
     function update() {
         $user_id = $_REQUEST ['user_id'];
         $task_date = $_REQUEST ['task_date'];
+        $bid = $_REQUEST['bid'];
 
         if (empty($user_id)) $this->error('用户ID必须');
         if (empty($task_date)) $this->error('Task日期必须');
+        if (empty($bid)) $this->error('请选择业务');
+
+        $branch = M('branch');
+        $where = array('id' => $bid, 'status' => 1);
+        $res = $branch->where($where)->field('id,title')->find();
 
         if (! D('User')->isSameDepartment($user_id)) {
             $this->error('不能修改其它部门工作日志');
@@ -76,6 +87,8 @@ class DailyTaskAction extends CommonAction {
             if (false === $model->create ()) {
                 $this->error ( $model->getError () );
             }
+
+            $model->btmp_title = $res['title'];
             $list = $model->add ();
         } else { // 更新数据
             $_POST ['id'] = $po['id'];
@@ -84,6 +97,7 @@ class DailyTaskAction extends CommonAction {
                 $this->error ( $model->getError () );
             }
 
+            $model->btmp_title = $res['title'];
             $list = $model->save ();
         }
 

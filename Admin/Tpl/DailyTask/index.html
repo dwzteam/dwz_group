@@ -47,6 +47,8 @@
 			<th width="80" orderField="nickname" <if condition="$_REQUEST._order eq 'nickname'">class="{$_REQUEST._sort}"</if>>昵称</th>
             <th width="80" orderField="department" <if condition="$_REQUEST._order eq 'department'">class="{$_REQUEST._sort}"</if>>部门</th>
             <th>内容</th>
+			<th width="80" orderField="btmp_title" <if condition="$_REQUEST._order eq 'btmp_title'">class="{$_REQUEST._sort}"</if>>业务</th>
+			<th width="80" orderField="username" <if condition="$_REQUEST._order eq 'username'">class="{$_REQUEST._sort}"</if>>产品经理</th>
 			<th width="80" orderField="task_date" <if condition="$_REQUEST._order eq 'task_date'">class="{$_REQUEST._sort}"</if>>日期</th>
             <th width="130" orderField="create_time" <if condition="$_REQUEST._order eq 'create_time'">class="{$_REQUEST._sort}"</if>是>添加时间</th>
 		</tr>
@@ -57,6 +59,8 @@
 				<td>{$vo['nickname']}</td>
                 <td>{$vo['department']|C='departments.'.###}</td>
                 <td><?php echo str_replace($search, $replace, $vo['content']) ?></td>
+				<td>{$vo['btmp_title']}</td>
+				<td>{$vo['username']}</td>
 				<td>{$vo['task_date']}</td>
 				<td>{$vo['create_time']|date="Y-m-d H:i:s",###}</td>
 			</tr>
