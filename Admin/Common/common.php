@@ -352,10 +352,12 @@ function isMobile(){
  * @param string $context
  */
 function sendEmail($title='', $add = array(), $context=''){
+
     // 实例化PHPMailer核心类
     $mail = new PHPMailer();
+
     // 是否启用smtp的debug进行调试 开发环境建议开启 生产环境注释掉即可 默认关闭debug调试模式
-    $mail->SMTPDebug = 1;
+    //$mail->SMTPDebug = 1;
     // 使用smtp鉴权方式发送邮件
     $mail->isSMTP();
     // smtp需要鉴权 这个必须是true
@@ -398,6 +400,5 @@ function sendEmail($title='', $add = array(), $context=''){
     }
     return $result;
 }
-
-
 ?>
+

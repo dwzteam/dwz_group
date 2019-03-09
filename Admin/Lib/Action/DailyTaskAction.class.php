@@ -353,16 +353,23 @@ class DailyTaskAction extends CommonAction {
         $this->display ();
     }
     /**
-     * 发送邮件方法   TODO   加入调整页面后直接发送
+     * 发送邮件方法
      */
     function sendWeeklyEmail() {
-        $user_id = $_SESSION [C ( 'USER_AUTH_KEY' )];
-        var_dump($_REQUEST);die;
-        $this->success('成功');
-      //  var_dump(234432);die;
-       //sendEmail();
+        $week = $_REQUEST['week'];
+        $email = $_REQUEST['bid'];
+        $context = $_REQUEST['content'];
+        $context = str_replace("\r\n", "<br>", $context);
+        $context = str_replace("\t", "&emsp;&emsp;&emsp;&emsp;", $context);
+        $title = 'W' . $week . "周报";
+
+        $res = sendEmail($title, array($email), $context);
+
+        if ($res['status']){
+            $this->success('成功');
+        }else{
+            $this->error($res['msg']);
+        }
     }
 }
 ?>
-
-

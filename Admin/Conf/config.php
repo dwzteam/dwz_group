@@ -47,7 +47,7 @@ $config	= array(
     'MAIL_FROM_NAME'=> '122539137@qq.com',
     'MAIL_FROM_ADDRESS'=> '122539137@qq.com',
     'MAIL_FROM_PASSWORD' => 'test',
-    'MAIL_DEPARTMENT_ADDRESS' => 'shangcheng-ark@chuchujie.com',  // 部门邮箱地址
+    'MAIL_DEPARTMENT_ADDRESS' => '122539137@qq.com',  // 部门邮箱地址
 
 );
 

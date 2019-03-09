@@ -1,12 +1,3 @@
-<include file="Public:pagerForm" />
-<?php
-	$accessSystemDB = moduleAccess('SystemDB');
-	$search   = array("\r\n", "\n", "\r");
-	$replace = '<br />';
-$index = 0;
-?>
-
-
 	<form method="post" action="__URL__/sendWeeklyEmail" class="pageForm required-validate" onsubmit="return validateCallback(this, navTabAjaxDone)">
 		<input type="hidden" name="week" value="{$week}"/>
 		<div class="pageFormContent" layoutH="98">
@@ -21,10 +12,21 @@ $index = 0;
 				</dd>
 			</dl>
 			<dl class="nowrap">
-				<dt>第{$week}周周报内容：</dt>
+				<dt >第{$week}周周报内容：</dt>
 				<dd><textarea class="required" name="content" rows="10" cols="85" >
-					<?php var_dump($model); ?>
-
+					<?php
+					$nameArr = [];
+					$num = 0;
+					foreach($model as $mv){
+						if(!in_array($mv['nickname'], $nameArr)){
+							array_push($nameArr, $mv['nickname']);
+							$num = 0;
+							echo "\r\n" . $mv['nickname'] . ":\t业务信息\t\t时间\t\t项目经理\t项目名称\r\n";
+						}
+						$num ++;
+						echo "\t" . $num . "、" . $mv['content'] . "\t" . $mv['task_date'] . "\t" . $mv['username'] . "\t" . $mv['btmp_title'] . "\r\n";
+					}
+					?>
 				</textarea></dd>
 			</dl>
 		</div>
