@@ -42,6 +42,13 @@ $config	= array(
 	'RBAC_ACCESS_TABLE'=>'access',
 	'RBAC_NODE_TABLE'=>'node',
 
+    // 邮件配置信息
+    'MAIL_FROM_NICKNAME' => '周报系统',
+    'MAIL_FROM_NAME'=> '122539137@qq.com',
+    'MAIL_FROM_ADDRESS'=> '122539137@qq.com',
+    'MAIL_FROM_PASSWORD' => 'test',
+    'MAIL_DEPARTMENT_ADDRESS' => 'shangcheng-ark@chuchujie.com',  // 部门邮箱地址
+
 );
 
 return array_merge($config,$siteconfig,$constants);

@@ -310,5 +310,59 @@ class DailyTaskAction extends CommonAction {
 
         return $map;
     }
+
+    /**
+     * 汇总周报信息
+     */
+    function weeklyReportSummary(){
+        $department = $_GET['department'] ? $_GET['department'] : 1;
+        // 时间
+        $ownAddress = isset($_SESSION['email']) ? $_SESSION['email'] : null;
+        $week_date = $_REQUEST['week_date'];        // 时间格式
+        $timeArr = explode("-", $week_date);
+        $year = $timeArr[0];
+        $weeks = $this->_allWeeksByYear($year);     // 获取全部
+        $weekArr = array_column($weeks, 'date', 'sn');
+        $week = array_search(strtotime($week_date), $weekArr);
+        if (!$week){
+            $this->error ( '获取周信息失败!' );
+        }
+        // 周报
+        $model = new DailyTaskViewModel();
+        //$map = array ('user_id' => $_SESSION['authId']);
+        $startDate = $weekArr[$week];
+        $endDate = $weekArr[($week + 1)];
+        if (!empty($startDate) && !empty($endDate)){
+            $map['task_date'] = array(array('egt', date("Y-m-d",$startDate)), array('elt', date("Y-m-d",$endDate)));
+        } else if (!empty($startDate)) {
+            $map['task_date'] = array('egt', date("Y-m-d",$startDate));
+        } else if (!empty($endDate)) {
+            $map['task_date'] = array('elt', date("Y-m-d",$endDate));
+        }
+        $map['department'] = $department;
+        $po = $model->where ( $map )->order('user_id asc')->select();
+        // 邮件地址
+        $address = [
+            C('MAIL_DEPARTMENT_ADDRESS'),
+            $ownAddress
+        ];
+
+        $this->assign ( 'model', $po);
+        $this->assign ( 'address', $address );
+        $this->assign ( 'week', $week );
+        $this->display ();
+    }
+    /**
+     * 发送邮件方法   TODO   加入调整页面后直接发送
+     */
+    function sendWeeklyEmail() {
+        $user_id = $_SESSION [C ( 'USER_AUTH_KEY' )];
+        var_dump($_REQUEST);die;
+        $this->success('成功');
+      //  var_dump(234432);die;
+       //sendEmail();
+    }
 }
 ?>
+
+
