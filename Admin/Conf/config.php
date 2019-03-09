@@ -13,7 +13,7 @@ $config	= array(
 	'DB_HOST'=>'127.0.0.1',
 	'DB_NAME'=>'dwz_group',
 	'DB_USER'=>'root',
-	'DB_PWD'=>'123456',
+	'DB_PWD'=>'',
 	'DB_PORT'=>'3306',
 	'DB_PREFIX'=>'',
 
@@ -41,6 +41,13 @@ $config	= array(
 	'RBAC_USER_TABLE'=>'role_user',
 	'RBAC_ACCESS_TABLE'=>'access',
 	'RBAC_NODE_TABLE'=>'node',
+
+    // 邮件配置信息
+    'MAIL_FROM_NICKNAME' => '周报系统',
+    'MAIL_FROM_NAME'=> '122539137@qq.com',
+    'MAIL_FROM_ADDRESS'=> '122539137@qq.com',
+    'MAIL_FROM_PASSWORD' => 'test',
+    'MAIL_DEPARTMENT_ADDRESS' => '122539137@qq.com',  // 部门邮箱地址
 
 );
 

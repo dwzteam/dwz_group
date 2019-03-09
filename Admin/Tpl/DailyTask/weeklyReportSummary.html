@@ -1,0 +1,40 @@
+	<form method="post" action="__URL__/sendWeeklyEmail" class="pageForm required-validate" onsubmit="return validateCallback(this, navTabAjaxDone)">
+		<input type="hidden" name="week" value="{$week}"/>
+		<div class="pageFormContent" layoutH="98">
+			<dl>
+				<dt>地址：</dt>
+				<dd>
+					<select name="bid" class="required">
+						<voList name="address" id="add" key="$key">
+							<option value="{$add}"><?php if($key==0){echo '全部门||';} ?>{$add}</option>
+						</voList>
+					</select>
+				</dd>
+			</dl>
+			<dl class="nowrap">
+				<dt >第{$week}周周报内容：</dt>
+				<dd><textarea class="required" name="content" rows="10" cols="85" >
+					<?php
+					$nameArr = [];
+					$num = 0;
+					foreach($model as $mv){
+						if(!in_array($mv['nickname'], $nameArr)){
+							array_push($nameArr, $mv['nickname']);
+							$num = 0;
+							echo "\r\n" . $mv['nickname'] . ":\t业务信息\t\t时间\t\t项目经理\t项目名称\r\n";
+						}
+						$num ++;
+						echo "\t" . $num . "、" . $mv['content'] . "\t" . $mv['task_date'] . "\t" . $mv['username'] . "\t" . $mv['btmp_title'] . "\r\n";
+					}
+					?>
+				</textarea></dd>
+			</dl>
+		</div>
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">发送</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+
+

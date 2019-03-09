@@ -93,14 +93,11 @@
 		<tr>
 			<td></td>
 			<td style="font-weight: bold">
-				<?php if ($accessSystemDB && isset($weekSummary)) { ?>
-				<a class="unit" href="__URL__/editWeekSummary/department/{$weekSummary['department']}/week_date/{$weekSummary['week_date']}" target="navTab" rel="DailyTaskOpt">本周总结</a>
-				<?php
-            } else {
-                echo '本周总结';
-            }
-            ?>
-			</td>
+                <?php  if ($accessSystemDB && isset($weekSummary)) { ?>
+                    <a class="unit" target="dialog" rel="dlg_page11" href="__URL__/weeklyReportSummary/department/{$weekSummary['department']}/week_date/{$weekSummary['week_date']}" >发送周报</a>
+                <?php
+            } ?>
+            </td>
 			<td colspan="7" style="color:red"><?php echo str_replace($search, $replace, $weekSummary['content']) ?></td>
 		</tr>
         </tbody>

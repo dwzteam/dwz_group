@@ -10,6 +10,6 @@ return array(
 	'FAX'=>'',
 	'ADDRESS'=>'',
 	'OFFLINEMESSAGE'=>'本站正在维护中，暂不能访问。<br /> 请稍后再访问本站。',
-	'DWZ_URL'=>'http://j-ui.com',
+    'PHABRICATOR'=>'http://phabricator.culiu.org/w/shangcheng/%E5%95%86%E5%9F%8E%E5%90%8E%E5%8F%B0/new-colleagues-notice-of-entry/',
 );
 ?>
